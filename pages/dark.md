@@ -41,6 +41,7 @@ nav_order: 2
 - If you pick Scyther, it is looking for Black Augarite to evolve (drag item onto Scyther)
 - This requires that the dominant synergy on the board be dark, with at least 8 dark Pokemon total between you and your opponent, AND you must have at least rock 2
 - Check your opponents boards for dark Pokemon (does not need to be the full synergy). If you can run rock 2 and have the total number of dark Pokemon be at least 8 against them, this will give you Black Augarite
+- If no opponents are running dark Pokemon, you will need to get to level 8 and have a Dark Stone to run 8 dark Pokemon and rock 2 yourself
 - There are 4 Dark/Rock Pokemon:
     * **Larvitar** - Must have
     * **Lycanroc Night** - Has a similar condition as Kleavor. Great to have around or use as your 2nd rock type while building Kleavor, because if you finish them you can easily get Dark 7 Rock 4
