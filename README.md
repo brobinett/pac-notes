@@ -1,5 +1,3 @@
-View the live site at: https://brobinett.github.io/pac-notes/pages/amorphous.html
-
 # Dependencies
 
 [Jekyll](https://jekyllrb.com), [Bundler](https://bundler.io)
