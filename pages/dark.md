@@ -53,3 +53,5 @@ nav_order: 2
 - Its ability low impact and if you put it in the back it will deal 0 damage and die last. Therefore, its best to get on Rock synergy and put it in the front to tank
 - You want to be running Larvitar anyway, so this is a free way to get on Rock 2 while maximizing Dark synergy in the mid game
 - Getting Rock 4/6 is good, if you can do so while maintaining Dark 7. One Dark Stone will let you do this on level 8 and run dark type Ryhorn + 1 filler (Geodude or Onix is best to dig)
+
+![](../assets/images/dark7rock2.png)
