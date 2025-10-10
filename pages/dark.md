@@ -9,42 +9,37 @@ nav_order: 2
 
 <details>
 <summary>Boards</summary>
-<br>
 <h3>Standard Dark</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/dark_standard.png" alt="Dark" style="height:220px;">
-  <img src="../assets/images/dark_standard_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/dark_standard.png" alt="Dark" style="height:220px;">
+  <img src="../assets/images/dark/dark_standard_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<br>
 <h3>Dark Wild</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/dark_wild.png" alt="Dark" style="height:220px;">
-  <img src="../assets/images/dark_wild_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/dark_wild.png" alt="Dark" style="height:220px;">
+  <img src="../assets/images/dark/dark_wild_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<br>
 <h3>Dark Ghost Amorph</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/dark_ghost.png" alt="Dark Ghost Amorph" style="height:220px;">
-  <img src="../assets/images/dark_ghost_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/dark_ghost.png" alt="Dark Ghost Amorph" style="height:220px;">
+  <img src="../assets/images/dark/dark_ghost_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<br>
 <h3>Darkrai Spiritomb</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/darkrai_spiritomb_dark.png" alt="Darkrai Spiritomb" style="height:220px;">
-  <img src="../assets/images/darkrai_spiritomb_dark_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/darkrai_spiritomb_dark.png" alt="Darkrai Spiritomb" style="height:220px;">
+  <img src="../assets/images/dark/darkrai_spiritomb_dark_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<br>
 <h3>Lunatone</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/lunatone_dark_rock.png" alt="Lunatone" style="height:220px;">
-  <img src="../assets/images/lunatone_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/lunatone_dark_rock.png" alt="Lunatone" style="height:220px;">
+  <img src="../assets/images/dark/lunatone_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<br>
 <h3>Kleavor</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/kleavor_dark_rock.png" alt="Kleavor" style="height:220px;">
-  <img src="../assets/images/kleavor_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/kleavor_dark_rock.png" alt="Kleavor" style="height:220px;">
+  <img src="../assets/images/dark/kleavor_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
 </div>
+<br>
 </details>
 
 <details>
@@ -90,8 +85,8 @@ nav_order: 2
 <br>
 <h3>Kleavor</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/kleavor_dark_rock.png" alt="Kleavor" style="height:220px;">
-  <img src="../assets/images/kleavor_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/kleavor_dark_rock.png" alt="Kleavor" style="height:220px;">
+  <img src="../assets/images/dark/kleavor_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
   <li>If you pick Scyther, it is looking for Black Augarite to evolve (drag item onto Scyther)</li>
@@ -114,8 +109,8 @@ nav_order: 2
 <br>
 <h3>Lunatone</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/lunatone_dark_rock.png" alt="Lunatone" style="height:220px;">
-  <img src="../assets/images/lunatone_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/lunatone_dark_rock.png" alt="Lunatone" style="height:220px;">
+  <img src="../assets/images/dark/lunatone_dark_rock_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
   <li>Lunatone sets night weather, and is Dark/Rock, which means you will always win the weather war</li>
@@ -130,8 +125,8 @@ nav_order: 2
 <br>
 <h3>Absol</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/dark_wild.png" alt="Absol" style="height:220px;">
-  <img src="../assets/images/dark_wild_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../assets/images/dark/dark_wild.png" alt="Absol" style="height:220px;">
+  <img src="../assets/images/dark/dark_wild_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
   <li>tbd</li>
