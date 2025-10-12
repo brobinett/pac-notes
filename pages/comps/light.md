@@ -1,8 +1,8 @@
 ---
-title: Ground
+title: Light
 layout: home
 parent: Comps
-nav_order: 5
+nav_order: 27
 ---
 
-ground
+light

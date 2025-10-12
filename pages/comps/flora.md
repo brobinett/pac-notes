@@ -2,7 +2,7 @@
 title: Flora
 layout: home
 parent: Comps
-nav_order: 3
+nav_order: 19
 ---
 
 # Flora Synergy Guide

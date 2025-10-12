@@ -2,7 +2,7 @@
 title: Dark
 layout: home
 parent: Comps
-nav_order: 2
+nav_order: 8
 ---
 
 # Dark Synergy Guide

@@ -2,7 +2,7 @@
 title: Gourmet
 layout: home
 parent: Comps
-nav_order: 4
+nav_order: 31
 ---
 
 # Gourmet Synergy Guide

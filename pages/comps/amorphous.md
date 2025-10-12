@@ -2,7 +2,7 @@
 title: Amorphous
 layout: home
 parent: Comps
-nav_order: 1
+nav_order: 30
 ---
 
 # Amorphous Synergy Guide
