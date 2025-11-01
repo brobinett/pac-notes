@@ -1,3 +1,5 @@
+Visit the live site at: https://brobinett.github.io/pac-notes/
+
 # Dependencies
 
 [Jekyll](https://jekyllrb.com), [Bundler](https://bundler.io)
