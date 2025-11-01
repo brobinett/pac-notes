@@ -1,0 +1,25 @@
+<button id="theme-toggle" style="padding: 8px 12px; cursor: pointer; border: 1px solid #ced6e0; border-radius: 4px; background: transparent; margin-left: 8px;">
+  <span id="theme-icon"></span>
+  <span id="theme-text">Dark Mode</span>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleButton = document.getElementById('theme-toggle');
+  var themeIcon = document.getElementById('theme-icon');
+  var themeText = document.getElementById('theme-text');
+  
+  var currentTheme = localStorage.getItem('theme') || 'default';
+  themeIcon.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+  themeText.textContent = ' Mode';
+  
+  toggleButton.addEventListener('click', function() {
+    var currentTheme = localStorage.getItem('theme') || 'default';
+    var newTheme = currentTheme === 'dark' ? 'default' : 'dark';
+    
+    localStorage.setItem('theme', newTheme);
+    jtd.setTheme(newTheme);
+    
+    themeIcon.textContent = newTheme === 'dark' ? 'Light' : 'Dark';
+  });
+});
+</script>

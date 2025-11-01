@@ -1,0 +1,8 @@
+<script>
+(function() {
+  var savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark' && typeof jtd !== 'undefined') {
+    jtd.setTheme('dark');
+  }
+})();
+</script>
