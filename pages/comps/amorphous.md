@@ -11,28 +11,28 @@ nav_order: 30
 <summary>Boards</summary>
 <h3>Pyukumuku Water Adds</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/amorphous/pyukumuku_water_adds.png" alt="Pyukumuku Water Adds" style="height:220px;">
-  <img src="../assets/images/amorphous/pyukumuku_water_adds_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../../assets/images/amorphous/pyukumuku_water_adds.png" alt="Pyukumuku Water Adds" style="height:220px;">
+  <img src="../../assets/images/amorphous/pyukumuku_water_adds_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <h3>Castform Water Adds</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/amorphous/castform_water_adds.png" alt="Castform Water Adds" style="height:220px;">
-  <img src="../assets/images/amorphous/castform_water_adds_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../../assets/images/amorphous/castform_water_adds.png" alt="Castform Water Adds" style="height:220px;">
+  <img src="../../assets/images/amorphous/castform_water_adds_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <h3>Ghost Amorphous</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/amorphous/amorphous_ghost_adds.png" alt="Amorphous Ghost Adds" style="height:220px;">
-  <img src="../assets/images/amorphous/amorphous_ghost_adds_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../../assets/images/amorphous/amorphous_ghost_adds.png" alt="Amorphous Ghost Adds" style="height:220px;">
+  <img src="../../assets/images/amorphous/amorphous_ghost_adds_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <h3>Poison Amorphous</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/amorphous/amorphous_poison_adds.png" alt="Amorphous Poison Adds" style="height:220px;">
-  <img src="../assets/images/amorphous/amorphous_poison_adds_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../../assets/images/amorphous/amorphous_poison_adds.png" alt="Amorphous Poison Adds" style="height:220px;">
+  <img src="../../assets/images/amorphous/amorphous_poison_adds_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <h3>Castform Koffing Artificial</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../assets/images/amorphous/castform_koffing_artificial.png" alt="Castform Koffing Artificial" style="height:220px;">
-  <img src="../assets/images/amorphous/castform_koffing_artificial_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../../assets/images/amorphous/castform_koffing_artificial.png" alt="Castform Koffing Artificial" style="height:220px;">
+  <img src="../../assets/images/amorphous/castform_koffing_artificial_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <br>
 </details>
