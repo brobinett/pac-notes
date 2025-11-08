@@ -11,7 +11,7 @@ nav_order: 13
 
 <details>
 <summary>Boards</summary>
-<h3>All <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> add picks with Arceus and <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique</h3>
+<h3>All <img src="../../assets/images/types/NORMAL.svg" alt="Normal" style="height:25px;"> add picks with Arceus and <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique</h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_9_normal_9.png" alt="Field Normal 9" style="height:220px;">
   <img src="../../assets/images/field/field_9_normal_9_synergies.png" alt="Synergies" style="height:220px;">
