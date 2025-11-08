@@ -72,6 +72,7 @@ nav_order: 13
       <li><b>White Flute</b> - This item licks goats. Slightly better in Wild 4.</li>
     </ul>
   </details>
+  <details>
   <summary>Artificial Tier List</summary>
     <ul>
       <li><b>Running Shoes</b> - Fit in any non Field unit. Good choices to fit in a Bug, Wild 4, a random ultra that benefits from Field (Porygon, Grookey, Happiny, Teddiursa).</li>
