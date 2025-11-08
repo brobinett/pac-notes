@@ -34,6 +34,11 @@ nav_order: 13
   <img src="../../assets/images/field/field_fire.png" alt="Field Fire" style="height:220px;">
   <img src="../../assets/images/field/field_fire_synergies.png" alt="Synergies" style="height:220px;">
 </div>
+<h3>Field Fire Wild</h3>
+<div style="display: flex; gap: 16px;">
+  <img src="../../assets/images/field/field_fire_6_wild_4.png" alt="Field Fire 6 Wild 4" style="height:220px;">
+  <img src="../../assets/images/field/field_fire_6_wild_4_synergies.png" alt="Synergies" style="height:220px;">
+</div>
 <h3>Field Psychic</h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_psychic_water.png" alt="Lunatone" style="height:220px;">
@@ -45,7 +50,54 @@ nav_order: 13
 
 <details>
 <summary>Tips and Tricks</summary>
-<br>
+<h3>Items</h3>
+<ul>
+  <li>The Field passive gives attack speed and inconsistent healing to your Pokemon. This means that items that give damage, tankiness, and sustain are very good.</li>
+  <li>Prioritize Heart Scale (Muscle Band, Flame Orb, Fluffy Tail, Rocky Helmet) and Charcoal (Flame Orb, Red Orb, Shell Bell, Deep Sea Tooth, Punching Glove). Try to get a few of Magnet, Spoon, Ice, Glasses</li>
+  <li>Thunderstone is also almost always a useful item to have. If several fire or psychic units are in their stones can be okay too.</li>
+  <li>Typically your carries would like at least 1 DPS and tankiness/sustain item.</li>
+  <details>
+  <summary>Shiny Item Tier List</summary>
+    <ul>
+      <li><b>Shiny Stone</b> - Incredible since you will always be on light in the endgame. Also condsider just pivoting into light.</li>
+      <li><b>Rare Candy</b> - Stick on a sellable strong add pick Pokemon until you can complete Torracat, Dewott, Vigoroth, Luxio, or Whirlpede. If you get a Scolipede, run a bug.</li>
+      <li><b>Absorb Bulb</b> - Triples the EHP of the Pokemon wearing it. Put it on your Legendary/strongest carry. Very weak against pure damage.</li>
+      <li><b>Dynamax Band</b> - Strictly worse than Absorb bulb because of the Field healing, but still very good. Put it on your Legendary/strongest carry. Better against Steel, but not burn or poison.</li>
+      <li><b>Eviolite</b> - Better stats than Absorb Bulb or Dynamax Band but must go on a no fully evolved Pokemon. Stick it on someone sellable until you can get Torracat, Dewott, Vigoroth, Luxio, or Whirlpede.</li>
+      <li><b>Comet Shard</b> - Provides good damage and hopefully kills some stuff at the start. Wants to be on high attack Pokemon. The best ones are Luxray, Scolipede, Samurott, Slaking, Granbull, Suicune, Entei, Raikou, Spectrier, Luxio, Beartic, Whirlpede, Farigiraf, Inciniroar.</li>
+      <li><b>Gold Bow</b> - Put it on someone in the front. Another Field is never bad. If you have Venipede on 10 run a Bug.</li>
+      <li><b>Repeat Ball</b> - The stats are not super impactful in Field. Probably best to use to try to complete 3 stars. More Field legendaries would be great, but unlikely.</li>
+      <li><b>Gold Bottle Cap</b> - Stick on a carry with other crit items. Great on Delibird.</li>
+      <li><b>Sacred Ash</b> - Hard to time so that it goes off when at least 4 are dead, but while there are still enough alive to benefit and win. Does not want to be on the last one alive.</li>
+      <li><b>White Flute</b> - This item licks goats. Slightly better in Wild 4.</li>
+    </ul>
+  </details>
+  <summary>Artificial Tier List</summary>
+    <ul>
+      <li><b>Running Shoes</b> - Fit in any non Field unit. Good choices to fit in a Bug, Wild 4, a random ultra that benefits from Field (Porygon, Grookey, Happiny, Teddiursa).</li>
+      <li><b>Light Ball</b> - Incredible since you will always be on light in the endgame.</li>
+      <li><b>Tiny Mushroom</b> - Incredible once you have Venipede but not especially useful before that. It probably best to duplicate the Venipede since it won't lose max hp.</li>
+      <li><b>Exp Share</b> - Great if you have the items for it. You usually want to itemize your legendary and put this on the Pokemon next to it. Also great next to Furfrou. Can copy Psychic AP buff as well. A lot of the uniques are good carriers, notably Miltank. A lot of the strong Field Pokemon have over 25 attack. High defense: Furfrou, Samurott, Incineroar, Camerupt. High SpDef: Spectrier, Grumpig, Camerupt.</li>
+      <li><b>Cooking Pot</b> - Need Flame Orb. Incredibly good with Fidough and Miltank.</li>
+      <li><b>Incense</b> - Put this on Mareep to search for Luxios.</li>
+      <li><b>Magmarizer</b> - Stick on a bulky carry. Good vs healing comps.</li>
+      <li><b>Silk Scarf</b> - Great if you are in Normal. It should go on the Pokemon in the middle of the box.</li>
+      <li><b>Metal Coat</b> - Just great defensive stats.</li>
+      <li><b>Toxic Orb</b> - Slightly better Flame Orb. Rarely puts you on Poison 3 with Nidoran and Venipede.</li>
+      <li><b>Max Elixir</b> - A lot better if in Psychic or have a dedicated caster. Works very well on Stantler, Miltank, and Oshawott.</li>
+      <li><b>Air Balloon</b> - Just attack speed and dodge. Gives 11% more EHP.</li>
+      <li><b>Electrilizer</b> - Attack speed with a mostly useless bonus effect.</li>
+      <li><b>Surf Board</b> - Attack speed with a bonus for having Buizel or Chubchoo add picks.</li>
+      <li><b>Macho Brace</b> - Gives pretty good damage and the attack speed will not matter after a few stack of Field. Miensfoo and Oshawott give a small bonus.</li>
+      <li><b>Pokerus</b> - The effect of this is pretty minor. Put on a Pokemon that will live a while.</li>
+      <li><b>Metronome</b> - Pretty good caster item. If you have Minccinno you can put it on one of the many low cost ability Field Pokemon (Zigzagoon, Mienfoo, Ponyta, Snubbull, Buizel, Shinx, Plusle/Minun, Snivy, Scorbunny) to generate attack.</li>
+      <li><b>Hard Stone</b> - Just 100 shields unless you have Greavard or Hisuian Growlithe.</li>
+      <li><b>Monster Gene</b> - Just 5 damage. Not worth 10 gold.</li>
+      <li><b>Rotom Phone</b> - Does nothing unless you have Greavard or Spectrier.</li>
+      <li><b>Explorer's Kit</b> - Lets you dig holes with Nidoran, Sentrent, or Numel. If you dug this up, there won't be much else of value in the holes.</li>
+    </ul>
+  </details>
+</ul>
 <h3>Early Game</h3>
 <ul>
   <li>Region does not really matter pre-unique. Only lets you get spoink. Best to go for a region with few regionals like fossil monster or dragon.</li>
@@ -55,11 +107,8 @@ nav_order: 13
   <li>There are two fire add picks. They are Growlithe (uncommon) and Ponyta (epic). If everything is in you can hit fire 8 with one Firestone or getting both Growlithes.</li>
   <li>The only electric add pick is Manectric. It is a big sign to try to field electric.</li>
   <li>Psychic has Munna (uncommon) and Girafarig (epic). It also relies on you hitting Stantler, picking up up Espurr on a PvE round, and being in Psychic or Field region for Spoink. Its worth putting in if the pieces come together, but hard to aim fo.r</li>
-  <li>The Field passive gives attack speed and inconsistent healing to your Pokemon. This means that items that give damage, tankiness, and sustain are very good.</li>
-  <li>Thunderstone is also almost always a useful item to have. If several fire or psychic units are in their stones can be okay too.</li>
-  <li>Caster items are generally weaker unless you are in Psychic.</li>
-  <li>Typically your carries would like at least 1 DPS and tankiness/sustain item.</li>
-  <li>Hold onto your Mareeps, they will always come in once you have Shinx.</li>
+  <li>Hold onto your Mareeps, they will always come in once you have Shinx. Do not itemize them.</li>
+  <li>Always buy Espurr and Zigzagoon. Do not itemize them.</li>
 </ul>
 <h3>Uniques</h3>
 <ul>
@@ -140,6 +189,11 @@ nav_order: 13
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_fire.png" alt="Field Fire" style="height:220px;">
   <img src="../../assets/images/field/field_fire_synergies.png" alt="Synergies" style="height:220px;">
+</div>
+<h3>Fire 6 Wild 4</h3>
+<div style="display: flex; gap: 16px;">
+  <img src="../../assets/images/field/field_fire_6_wild_4.png" alt="Fire 6 Wild 4" style="height:220px;">
+  <img src="../../assets/images/field/field_fire_6_wild_4_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
   <li>There are 2 Fire add picks. They are Growlithe (uncommon) and Ponyta (epic).</li>
