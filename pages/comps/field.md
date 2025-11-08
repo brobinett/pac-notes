@@ -196,8 +196,8 @@ nav_order: 13
 <br>
 <h3>Psychic</h3>
 <div style="display: flex; gap: 16px;">
-  <img src="../../assets/images/field/field_wild.png" alt="Absol" style="height:220px;">
-  <img src="../../assets/images/field/field_wild_synergies.png" alt="Synergies" style="height:220px;">
+  <img src="../../assets/images/field/field_psychic_water.png" alt="Field Psychic" style="height:220px;">
+  <img src="../../assets/images/field/field_psychic_water_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
   <li>There are 2 Psychic add picks. They are Munna (uncommon) and Girafarig (epic).</li>
