@@ -1,0 +1,7 @@
+/* Site-wide overrides for small inline icons used in lists and tier items */
+/* Targets images that were using inline style="height:25px" on multiple pages. */
+img[style*="height:25px"] {
+  vertical-align: middle;
+  display: inline-block;
+  transform: translateY(-3px);
+}
