@@ -11,12 +11,12 @@ nav_order: 13
 
 <details>
 <summary>Boards</summary>
-<h3>All <img src="../../assets/images/types/NORMAL.svg" alt="Normal" style="height:25px;"> add picks with Arceus and <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique</h3>
+<h3>All <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> add picks with Arceus and <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> unique</h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_9_normal_9.png" alt="Field Normal 9" style="height:220px;">
   <img src="../../assets/images/field/field_9_normal_9_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<h3>3 or more <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> add picks with <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique</h3>
+<h3>3 or more <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> add picks with <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> unique</h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_9_normal_7.png" alt="Field Normal 7" style="height:220px;">
   <img src="../../assets/images/field/field_9_normal_7_synergies.png" alt="Synergies" style="height:220px;">
@@ -36,12 +36,12 @@ nav_order: 13
   <img src="../../assets/images/field/field_fire.png" alt="Field Fire" style="height:220px;">
   <img src="../../assets/images/field/field_fire_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<h3><img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> add picks, Stantler, and Entei</h3>
+<h3><img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> add picks, Stantler, and Entei</h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_fire_6_wild_4.png" alt="Field Fire 6 Wild 4" style="height:220px;">
   <img src="../../assets/images/field/field_fire_6_wild_4_synergies.png" alt="Synergies" style="height:220px;">
 </div>
-<h3>Both <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> add picks, Stantler, Spoink region, and Dawnstone</h3>
+<h3>Both <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> add picks, Stantler, Spoink region, and Dawnstone</h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_psychic_water.png" alt="Field Psychic" style="height:220px;">
   <img src="../../assets/images/field/field_psychic_water_synergies.png" alt="Synergies" style="height:220px;">
@@ -56,7 +56,7 @@ nav_order: 13
 <ul>
   <li>The <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> passive gives attack speed and inconsistent healing to your Pokemon. This means that items that give damage, tankiness, and sustain are very good.</li>
   <li>Prioritize Heart Scale (Muscle Band, Flame Orb, Fluffy Tail, Rocky Helmet) and Charcoal (Flame Orb, Red Orb, Shell Bell, Deep Sea Tooth, Punching Glove). Try to get a few of Magnet, Spoon, Ice, Glasses</li>
-  <li>Thunderstone is also almost always a useful item to have. If several <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> or <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> units are in their stones can be okay too.</li>
+  <li>Thunderstone is also almost always a useful item to have. If several <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> or <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> units are in their stones can be okay too.</li>
   <li>Typically your carries would like at least 1 DPS and tankiness/sustain item.</li>
   <details>
   <summary>Shiny Item Tier List</summary>
@@ -81,7 +81,7 @@ nav_order: 13
       <li><img src="../../assets/images/items/light_ball.png" alt="Light Ball" style="height:25px;"><b> Light Ball</b> - Incredible since you will always be on light in the endgame.</li>
       <li><img src="../../assets/images/items/tiny_mushroom.png" alt="Tiny Mushroom" style="height:25px;"><b> Tiny Mushroom</b> - Incredible once you have Venipede but not especially useful before that. It probably best to duplicate the Venipede since it won't lose max hp.</li>
       <li><img src="../../assets/images/items/exp_share.png" alt="Exp Share" style="height:25px;"><b> Exp Share</b> - Great if you have the items for it. You usually want to itemize your legendary and put this on the Pokemon next to it. Also great next to Furfrou. Can copy Psychic AP buff as well. A lot of the uniques are good carriers, notably Miltank. A lot of the strong Field Pokemon have over 25 attack. High defense: Furfrou, Samurott, Incineroar, Camerupt. High SpDef: Spectrier, Grumpig, Camerupt.</li>
-      <li><img src="../../assets/images/items/cooking_pot.png" alt="Cooking Pot" style="height:25px;"><b> Cooking Pot</b> - Need Flame Orb. Incredibly good with Fidough and <img src="../../assets/images/types/gourmet.svg" alt="Gourmet" style="height:25px;"> Miltank.</li>
+      <li><img src="../../assets/images/items/cooking_pot.png" alt="Cooking Pot" style="height:25px;"><b> Cooking Pot</b> - Need Flame Orb. Incredibly good with Fidough and <img src=../../assets/images/types/GOURMET.svg alt="Gourmet" style="height:25px;"> Miltank.</li>
       <li><img src="../../assets/images/items/incense.png" alt="Incense" style="height:25px;"><b> Incense</b> - Put this on Mareep to search for Luxios.</li>
       <li><img src="../../assets/images/items/magmarizer.png" alt="Magmarizer" style="height:25px;"><b> Magmarizer</b> - Stick on a bulky carry. Good vs healing comps.</li>
       <li><img src="../../assets/images/items/silk_scarf.png" alt="Silk Scarf" style="height:25px;"><b> Silk Scarf</b> - Great if you are in Normal. It should go on the Pokemon in the middle of the box.</li>
@@ -106,32 +106,32 @@ nav_order: 13
     <li>Region does not really matter pre-unique. Only lets you get spoink. Best to go for a region with few regionals like <img src="../../assets/images/types/fossil.svg" alt="Fossil" style="height:25px;"> <img src="../../assets/images/types/monster.svg" alt="Monster" style="height:25px;"> or <img src="../../assets/images/types/dragon.svg" alt="Dragon" style="height:25px;">.</li>
   <li>Its usually better to play something else early and pivot into <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> if the adds are good.</li>
   <li>The early add picks are very important.</li>
-  <li>There are 5 <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> add picks. They are Skitty (uncommon), Minccino (uncommon), Meowth (rare), Sentret (rare), and Girafarig (epic). With at least 3 + hitting a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique you can hit <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> 9 <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> 7. If you hit 3 in uncommon/rare, try to get a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique.</li>
-  <li>There are two <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> add picks. They are Growlithe (uncommon) and Ponyta (epic). If everything is in you can hit <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> 8 with one Firestone or getting both Growlithes.</li>
-  <li>The only <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> add pick is Manectric. It is a big sign to play <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;">.</li>
-  <li><img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> has Munna (uncommon) and Girafarig (epic). It also relies on you hitting Stantler, picking up up Espurr on a PvE round, and being in <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> or <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> region for Spoink. Its worth putting in if the pieces come together, but hard to aim for.</li>
+  <li>There are 5 <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> add picks. They are Skitty (uncommon), Minccino (uncommon), Meowth (rare), Sentret (rare), and Girafarig (epic). With at least 3 + hitting a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> unique you can hit <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> 9 <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> 7. If you hit 3 in uncommon/rare, try to get a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> unique.</li>
+  <li>There are two <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> add picks. They are Growlithe (uncommon) and Ponyta (epic). If everything is in you can hit <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> 8 with one Firestone or getting both Growlithes.</li>
+  <li>The only <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> add pick is Manectric. It is a big sign to play <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;">.</li>
+  <li><img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> has Munna (uncommon) and Girafarig (epic). It also relies on you hitting Stantler, picking up up Espurr on a PvE round, and being in <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> or <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> region for Spoink. Its worth putting in if the pieces come together, but hard to aim for.</li>
   <li>Hold onto your Mareeps, they will always come in once you have Shinx. Do not itemize them.</li>
   <li>Always buy Espurr and Zigzagoon. Do not itemize them.</li>
 </ul>
 <h3>Uniques</h3>
 <ul>
-  <li>Backup portals are <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> (1/5), <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> (1/6), <img src="../../assets/images/types/wild.svg" alt="Wild" style="height:25px;"> (1/8), <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> (1/13), <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> (1/15). Delibird is not good enough to go for.</li>
+  <li>Backup portals are <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> (1/5), <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> (1/6), <img src=../../assets/images/types/WILD.svg alt="Wild" style="height:25px;"> (1/8), <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> (1/13), <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> (1/15). Delibird is not good enough to go for.</li>
   <li>Its hard to make more than 1 <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> portal so usually you don't get a choice.</li>
   <li>Plusle/Minun are the high roll, especially if Electrike is in. They can be itemized as casters.</li>
-  <li>Stantler is always good. It evolves on t20 into a good lategame carry and gives <img src="../../assets/images/types/wild.svg" alt="Wild" style="height:25px;"> 2 with 3/4 Legendaries and is a good reason to also look for Zigzagoon and Espurr.</li>
-  <li>Heatmor is kind of mediocre but with Growlithe you can stay open to <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> 6 or 8.</li>
-  <li>If you have at least 3/4 of the <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> add picks its good to aim for one of the <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> uniques. In terms of stats Furfrou > Tauros > Milktank. However Milktank can open up interesting <img src="../../assets/images/types/gourmet.svg" alt="Gourmet" style="height:25px;"> angles if Fidough is in.</li>
+  <li>Stantler is always good. It evolves on t20 into a good lategame carry and gives <img src=../../assets/images/types/WILD.svg alt="Wild" style="height:25px;"> 2 with 3/4 Legendaries and is a good reason to also look for Zigzagoon and Espurr.</li>
+  <li>Heatmor is kind of mediocre but with Growlithe you can stay open to <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> 6 or 8.</li>
+  <li>If you have at least 3/4 of the <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> add picks its good to aim for one of the <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> uniques. In terms of stats Furfrou > Tauros > Milktank. However Milktank can open up interesting <img src=../../assets/images/types/GOURMET.svg alt="Gourmet" style="height:25px;"> angles if Fidough is in.</li>
   <li>Delibird is enough of a low roll to consider leaving Field.</li>
 </ul>
 <h3>Mid Game</h3>
 <ul>
   <li>Usually you want to itemize your unique and let it carry you.</li>
   <li>Its very costly to roll, since you always want to go to 9 in this comp.</li>
-  <li>Usually its best to run all <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> units, unless you are splashing a powerful synergy like <img src="../../assets/images/types/gourmet.svg" alt="Gourmet" style="height:25px;">.</li>
-  <li>Once you see the epic add picks its time to evaluate if its worthwhile to go for <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;">/<img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;">/<img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;">.</li>
-  <li>If you hit Plusle/Minun or Electrike is in with Thunderstone you can go <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> 5. If both are in you can go <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> 7 with Thunderstone. Always play <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> if possible.</li>
-  <li>For <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;">, you always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> 6. And Entei + Firestone gets <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> 8. In this case it may be worthwhile to run more <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> Pokemon over <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> to start generating shards.</li>
-    <li>For <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;">, you always have Stantler unique. Espurr is always in but is annoying to get. It is worth running with Stantler alone. If you have 2 of Munna add, Girafarig add, and Spoink region go for <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> 4. If you have all 3 try to get a Dawnstone and put it on your legendary.</li>
+  <li>Usually its best to run all <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> units, unless you are splashing a powerful synergy like <img src=../../assets/images/types/GOURMET.svg alt="Gourmet" style="height:25px;">.</li>
+  <li>Once you see the epic add picks its time to evaluate if its worthwhile to go for <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;">/<img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;">/<img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;">.</li>
+  <li>If you hit Plusle/Minun or Electrike is in with Thunderstone you can go <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> 5. If both are in you can go <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> 7 with Thunderstone. Always play <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> if possible.</li>
+  <li>For <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;">, you always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> 6. And Entei + Firestone gets <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> 8. In this case it may be worthwhile to run more <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> Pokemon over <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> to start generating shards.</li>
+    <li>For <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;">, you always have Stantler unique. Espurr is always in but is annoying to get. It is worth running with Stantler alone. If you have 2 of Munna add, Girafarig add, and Spoink region go for <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> 4. If you have all 3 try to get a Dawnstone and put it on your legendary.</li>
   <li>Usually you want to itemize your unique and let it carry you.</li>
   <li>Nickit (rare) and Fidough (rare) are very powerful adds. Fidough should always be given a flame orb and fully itemized.</li>
 </ul>
@@ -163,9 +163,9 @@ nav_order: 13
   <img src="../../assets/images/field/field_9_normal_7_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
-  <li>There are 5 <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> add picks. They are Skitty (uncommon), Minccino (uncommon), Meowth (rare), Sentret (rare), and Girafarig (epic).</li>
-  <li>With at least 3 + hitting a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique you can hit <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> 9 <img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> 7. If you hit 3 in uncommon/rare, try to get a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> unique.</li>
-  <li>Always play as many <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/normal.svg" alt="Normal" style="height:25px;"> units as possible in a box, with the ranged units in the center.</li>
+  <li>There are 5 <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> add picks. They are Skitty (uncommon), Minccino (uncommon), Meowth (rare), Sentret (rare), and Girafarig (epic).</li>
+  <li>With at least 3 + hitting a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> unique you can hit <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> 9 <img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> 7. If you hit 3 in uncommon/rare, try to get a <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> unique.</li>
+  <li>Always play as many <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/NORMAL.svg alt="Normal" style="height:25px;"> units as possible in a box, with the ranged units in the center.</li>
   <li>Slakoth region is very important to hit. Slaking is a wincon.</li>
   <li>There are 11 Field/Normal Pokemon:
     <ul>
@@ -200,10 +200,10 @@ nav_order: 13
 </div>
 <ul>
   <li>There are 2 Fire add picks. They are Growlithe (uncommon) and Ponyta (epic).</li>
-  <li>You always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> 6. And Entei + Firestone gets <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> 8.</li>
-  <li>If you are close to <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> 8 and have enough health, just put some non <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> Pokemon in to get <img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> Shards for your carry.</li>
+  <li>You always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> 6. And Entei + Firestone gets <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> 8.</li>
+  <li>If you are close to <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> 8 and have enough health, just put some non <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;"> Pokemon in to get <img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> Shards for your carry.</li>
   <li>Camerupt region is very important to hit.</li>
-  <li>There are 8 <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/fire.svg" alt="Fire" style="height:25px;"> Pokemon:
+  <li>There are 8 <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/FIRE.svg alt="Fire" style="height:25px;"> Pokemon:
     <ul>
       <li><b>Cyndaquil</b> - Uncommon. Pretty decent early ranged unit. If you are in a <img src="../../assets/images/types/ghost.svg" alt="Ghost" style="height:25px;"> region in the midgame could consider Typhlosion.</li>
       <li><b>Growlithe</b> - Uncommon add pick. Pretty decent unit. Regional form is stronger but wants Protective Pads. Very good if you start in <img src="../../assets/images/types/rock.svg" alt="Rock" style="height:25px;"> region, since you can get both after midgame. Probably worth rollings some to finish Hisuian Arcanine in early game.</li>
@@ -232,11 +232,11 @@ nav_order: 13
   <img src="../../assets/images/field/field_electric_5_wild_4_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
-  <li>The only <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> add pick is Electrike (uncommon). It is a huge signal to play Field.</li>
-  <li>The only other conditional is if you hit Plusle/Minun and Raikou. If either of these things happen you should try to play <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> 3 or 5.</li>
-  <li><img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> 7 is possible if you hit everything and have 1 Thunderstone. This is worth doing, because adding <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> to a Pokemon is better than most items, but the <img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> 7 boost is very minor.</li>
+  <li>The only <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> add pick is Electrike (uncommon). It is a huge signal to play Field.</li>
+  <li>The only other conditional is if you hit Plusle/Minun and Raikou. If either of these things happen you should try to play <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> 3 or 5.</li>
+  <li><img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> 7 is possible if you hit everything and have 1 Thunderstone. This is worth doing, because adding <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> to a Pokemon is better than most items, but the <img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> 7 boost is very minor.</li>
   <li>Mareep and Shinx should be played in all games to get on <img src="../../assets/images/types/light.svg" alt="Light" style="height:25px;"> 2. Put your Legendary or strongest carry in the <img src="../../assets/images/types/light.svg" alt="Light" style="height:25px;"> spot.</li>
-  <li>There are 5 <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/electric.svg" alt="Electric" style="height:25px;"> Pokemon:
+  <li>There are 5 <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/ELECTRIC.svg alt="Electric" style="height:25px;"> Pokemon:
     <ul>
       <li><b>Mareep</b> - Common. Pretty weak ranged DPS. Never itemize this, since it will always come back in later with Shinx.</li>
       <li><b>Electrike</b> - Rare add pick. Understated but great typing.</li>
@@ -257,12 +257,12 @@ nav_order: 13
   <img src="../../assets/images/field/field_psychic_water_synergies.png" alt="Synergies" style="height:220px;">
 </div>
 <ul>
-  <li>There are 2 <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> add picks. They are Munna (uncommon) and Girafarig (epic).</li>
+  <li>There are 2 <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> add picks. They are Munna (uncommon) and Girafarig (epic).</li>
   <li>The other Pokemon to hit are Espurr (Wild uncommon), Spoink (regional), and Stantler (unique).</li>
-  <li>Always pick up Espurr if possible. It is incredible with Stantler, but is also worth playing if you hit a <img src="../../assets/images/types/wild.svg" alt="Wild" style="height:25px;"> legendary (3/4).</li>
-  <li>After you hit Stantler and see epic add picks, evaluate how many <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> Pokemon are in. If there are 4, its usually worthwhile to go for <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> 4. If all 5 are in try to make a Dawnstone and put it on your legendary for <img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> 6.</li>
+  <li>Always pick up Espurr if possible. It is incredible with Stantler, but is also worth playing if you hit a <img src=../../assets/images/types/WILD.svg alt="Wild" style="height:25px;"> legendary (3/4).</li>
+  <li>After you hit Stantler and see epic add picks, evaluate how many <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> Pokemon are in. If there are 4, its usually worthwhile to go for <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> 4. If all 5 are in try to make a Dawnstone and put it on your legendary for <img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> 6.</li>
   <li>Keep an eye out for useful unknowns to play in PvE rounds.</li>
-  <li>There are 5 <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src="../../assets/images/types/psychic.svg" alt="Psychic" style="height:25px;"> Pokemon:
+  <li>There are 5 <img src="../../assets/images/types/field.svg" alt="Field" style="height:25px;">/<img src=../../assets/images/types/PSYCHIC.svg alt="Psychic" style="height:25px;"> Pokemon:
     <ul>
       <li><b>Espurr</b> - Uncommon wild. Pretty mediocre Pokemon, but always take it for synergies later. Not usually worthwhile to roll for on PvE, unless you already have Stantler and know you need it for Psychic. Best friends with Stantler.</li>
       <li><b>Munna</b> - Rare add pick. Reasonable support. Ability gets quite powerful once on some Psychic levels.</li>
