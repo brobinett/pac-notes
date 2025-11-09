@@ -21,12 +21,12 @@ nav_order: 13
   <img src="../../assets/images/field/field_9_normal_7.png" style="height:220px;">
   <img src="../../assets/images/field/field_9_normal_7_synergies.png" style="height:220px;">
 </div>
-<h3>Electrike, Plusle/Minun, and Thunderstone</h3>
+<h3>Electrike, Plusle/Minun, and <img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;"></h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_electric.png" style="height:220px;">
   <img src="../../assets/images/field/field_electric_synergies.png" style="height:220px;">
 </div>
-<h3>Electrike, Stantler, and Thunderstone</h3>
+<h3>Electrike, Stantler, and <img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;"></h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_electric_5_wild_4.png" style="height:220px;">
   <img src="../../assets/images/field/field_electric_5_wild_4_synergies.png" style="height:220px;">
@@ -41,7 +41,7 @@ nav_order: 13
   <img src="../../assets/images/field/field_fire_6_wild_4.png" style="height:220px;">
   <img src="../../assets/images/field/field_fire_6_wild_4_synergies.png" style="height:220px;">
 </div>
-<h3>Both <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> add picks, Stantler, Spoink region, and Dawnstone</h3>
+<h3>Both <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> add picks, Stantler, Spoink region, and <img src="../../assets/images/items/DAWN_STONE.png" style="height:25px;"></h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_psychic_water.png" style="height:220px;">
   <img src="../../assets/images/field/field_psychic_water_synergies.png" style="height:220px;">
@@ -55,8 +55,8 @@ nav_order: 13
 <h3>Items</h3>
 <ul>
   <li>The <img src="../../assets/images/types/FIELD.svg" style="height:25px;"> passive gives attack speed and inconsistent healing to your Pokemon. This means that items that give damage, tankiness, and sustain are very good.</li>
-  <li>Prioritize Heart Scale (Muscle Band, Flame Orb, Fluffy Tail, Rocky Helmet) and Charcoal (Flame Orb, Red Orb, Shell Bell, Deep Sea Tooth, Punching Glove). Try to get a few of Magnet, Spoon, Ice, Glasses</li>
-  <li>Thunderstone is also almost always a useful item to have. If several <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> or <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> units are in their stones can be okay too.</li>
+  <li>Prioritize <img src="../../assets/images/items/HEART_SCALE.png" style="height:25px;"> (<img src="../../assets/images/items/MUSCLE_BAND.png" style="height:25px;">, <img src="../../assets/images/items/FLAME_ORB.png" style="height:25px;">, <img src="../../assets/images/items/FLUFFY_TAIL.png" style="height:25px;">, <img src="../../assets/images/items/ROCKY_HELMET.png" style="height:25px;">) and <img src="../../assets/images/items/CHARCOAL.png" style="height:25px;"> (<img src="../../assets/images/items/FLAME_ORB.png" style="height:25px;">, <img src="../../assets/images/items/RED_ORB.png" style="height:25px;">, <img src="../../assets/images/items/SHELL_BELL.png" style="height:25px;">, <img src="../../assets/images/items/DEEP_SEA_TOOTH.png" style="height:25px;">, <img src="../../assets/images/items/PUNCHING_GLOVE.png" style="height:25px;">). Try to get a few of <img src="../../assets/images/items/MAGNET.png" style="height:25px;">, <img src="../../assets/images/items/TWISTED_SPOON.png" style="height:25px;">, <img src="../../assets/images/items/NEVER_MELT_ICE.png" style="height:25px;">, <img src="../../assets/images/items/BLACK_GLASSES.png" style="height:25px;"></li>
+  <li><img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;"> is also almost always a useful item to have. If several <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> or <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> units are in their stones can be okay too.</li>
   <li>Typically your carries would like at least 1 DPS and tankiness/sustain item.</li>
   <details>
   <summary>Shiny Item Tier List</summary>
@@ -129,9 +129,9 @@ nav_order: 13
   <li>Its very costly to roll, since you always want to go to 9 in this comp.</li>
   <li>Usually its best to run all <img src="../../assets/images/types/FIELD.svg" style="height:25px;"> units, unless you are splashing a powerful synergy like <img src="../../assets/images/types/GOURMET.svg" style="height:25px;">.</li>
   <li>Once you see the epic add picks its time to evaluate if its worthwhile to go for <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;">/<img src="../../assets/images/types/FIRE.svg" style="height:25px;">/<img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;">.</li>
-  <li>If you hit Plusle/Minun or Electrike is in with Thunderstone you can go <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 5. If both are in you can go <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 7 with Thunderstone. Always play <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> if possible.</li>
-  <li>For <img src="../../assets/images/types/FIRE.svg" style="height:25px;">, you always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 6. And Entei + Firestone gets <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 8. In this case it may be worthwhile to run more <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> Pokemon over <img src="../../assets/images/types/FIELD.svg" style="height:25px;"> to start generating shards.</li>
-    <li>For <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;">, you always have Stantler unique. Espurr is always in but is annoying to get. It is worth running with Stantler alone. If you have 2 of Munna add, Girafarig add, and Spoink region go for <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> 4. If you have all 3 try to get a Dawnstone and put it on your legendary.</li>
+  <li>If you hit Plusle/Minun or Electrike is in with <img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;"> you can go <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 5. If both are in you can go <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 7 with <img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;">. Always play <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> if possible.</li>
+  <li>For <img src="../../assets/images/types/FIRE.svg" style="height:25px;">, you always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 6. And Entei + <img src="../../assets/images/items/FIRE_STONE.png" style="height:25px;"> gets <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 8. In this case it may be worthwhile to run more <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> Pokemon over <img src="../../assets/images/types/FIELD.svg" style="height:25px;"> to start generating shards.</li>
+    <li>For <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;">, you always have Stantler unique. Espurr is always in but is annoying to get. It is worth running with Stantler alone. If you have 2 of Munna add, Girafarig add, and Spoink region go for <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> 4. If you have all 3 try to get a <img src="../../assets/images/items/DAWN_STONE.png" style="height:25px;"> and put it on your legendary.</li>
   <li>Usually you want to itemize your unique and let it carry you.</li>
   <li>Nickit (rare) and Fidough (rare) are very powerful adds. Fidough should always be given a flame orb and fully itemized.</li>
 </ul>
@@ -145,7 +145,7 @@ nav_order: 13
 <ul>
   <li>The lategame is pretty simple. You always need to get to <img src="../../assets/images/types/FIELD.svg" style="height:25px;"> 9. Try to greedy level as much as possible.</li>
   <li>Its usually better to fully itemize a few strong carries with DPS and sustain.</li>
-  <li>Watch for opponents that want specific items to counter them, like Rocky Helmet, Assault Vest, or Fluffy Tail.</li>
+  <li>Watch for opponents that want specific items to counter them, like <img src="../../assets/images/items/ROCKY_HELMET.png" style="height:25px;">, <img src="../../assets/images/items/ASSAULT_VEST.png" style="height:25px;">, or <img src="../../assets/images/items/FLUFFY_TAIL.png" style="height:25px;">.</li>
 </ul>
 </details>
 
@@ -178,7 +178,7 @@ nav_order: 13
       <li><b>Slakoth</b> - Epic regional. Both evolutions after Slakoth are very powerful. Always wants to be itemized. Can cast.</li>
       <li><b>Tauros</b> - Unique. Pretty good DPS but falls off quickly. Self damage blocked by Protective Pads.</li>
       <li><b>Milktank</b> - Unique. Provides its own defense and damage scaling as a caster. Can solo boards with some sustain. Freinds with Fidough to get HP scaling with Gourmet.</li>
-      <li><b>Furfrou</b> - Unique. Self scaling defensive tank. It will get most of its speed back from <img src="../../assets/images/types/FIELD.svg" style="height:25px;">. Really wants Muscle Band.</li>
+      <li><b>Furfrou</b> - Unique. Self scaling defensive tank. It will get most of its speed back from <img src="../../assets/images/types/FIELD.svg" style="height:25px;">. Really wants <img src="../../assets/images/items/MUSCLE_BAND.png" style="height:25px;">.</li>
     </ul>
   </li>
 </ul>
@@ -198,19 +198,19 @@ nav_order: 13
 </div>
 <ul>
   <li>There are 2 Fire add picks. They are Growlithe (uncommon) and Ponyta (epic).</li>
-  <li>You always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 6. And Entei + Firestone gets <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 8.</li>
+  <li>You always have Cyndaquil and Litten. If you have all of Growlithe add, Ponyta add, Heatmor unique, and Numel region you can always make <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 6. And Entei + <img src="../../assets/images/items/FIRE_STONE.png" style="height:25px;"> gets <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 8.</li>
   <li>If you are close to <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> 8 and have enough health, just put some non <img src="../../assets/images/types/FIELD.svg" style="height:25px;"> Pokemon in to get <img src="../../assets/images/types/FIRE.svg" style="height:25px;"> Shards for your carry.</li>
   <li>Camerupt region is very important to hit.</li>
   <li>There are 8 <img src="../../assets/images/types/FIELD.svg" style="height:25px;">/<img src="../../assets/images/types/FIRE.svg" style="height:25px;"> Pokemon:
     <ul>
       <li><b>Cyndaquil</b> - Uncommon. Pretty decent early ranged unit. If you are in a <img src="../../assets/images/types/ghost.svg" style="height:25px;"> region in the midgame could consider Typhlosion.</li>
-      <li><b>Growlithe</b> - Uncommon add pick. Pretty decent unit. Regional form is stronger but wants Protective Pads. Very good if you start in <img src="../../assets/images/types/ROCK.svg" style="height:25px;"> region, since you can get both after midgame. Probably worth rollings some to finish Hisuian Arcanine in early game.</li>
+      <li><b>Growlithe</b> - Uncommon add pick. Pretty decent unit. Regional form is stronger but wants <img src="../../assets/images/items/PROTECTIVE_PADS.png" style="height:25px;">. Very good if you start in <img src="../../assets/images/types/ROCK.svg" style="height:25px;"> region, since you can get both after midgame. Probably worth rollings some to finish Hisuian Arcanine in early game.</li>
             <li><b>Litten</b> - Epic. Decent but kind of understatted. Ability scales with attack and attack speed. <img src="../../assets/images/types/DARK.svg" style="height:25px;"> type is kind of a detriment.</li>
       <li><b>Ponyta</b> - Epic add pick. Very strong, should always be played. Rapidash is much stronger than Heatmor. Great caster, has Entei's ability for half the cost.</li>
       <li><b>Numel</b> - Epic regional. Very bulky and powerful caster. Camerupt is stronger than Heatmor.</li>
       <li><b>Heatmor</b> - Unique. Fairly weak for a unique, don't itemize if you think you want to keep him for the synergy.</li>
-      <li><b>Entei</b> - Legendary. Really wants to also be on Wild if possible. Has the strongest ability in Field, but it costs too much.</li>
-      <li><b>Scorbunny</b> - Egg mon. Turns into a pretty decent ranged DPS, but has a very good low cost ability. Great reason to get into Field.</li>
+      <li><b>Entei</b> - Legendary. Really wants to also be on Wild if possible. Has the strongest ability in <img src="../../assets/images/types/FIELD.svg" style="height:25px;">, but it costs too much.</li>
+      <li><b>Scorbunny</b> - Egg mon. Turns into a pretty decent ranged DPS, but has a very good low cost ability. Great reason to get into <img src="../../assets/images/types/FIELD.svg" style="height:25px;">.</li>
     </ul>
   </li>
 </ul>
@@ -218,12 +218,12 @@ nav_order: 13
 
 <details>
 <summary>Electric</summary>
-<h3>Electrike, Plusle/Minun, and Thunderstone</h3>
+<h3>Electrike, Plusle/Minun, and <img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;"></h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_electric.png" style="height:220px;">
   <img src="../../assets/images/field/field_electric_synergies.png" style="height:220px;">
 </div>
-<h3>Electrike, Stantler, and Thunderstone</h3>
+<h3>Electrike, Stantler, and <img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;"></h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_electric_5_wild_4.png" style="height:220px;">
   <img src="../../assets/images/field/field_electric_5_wild_4_synergies.png" style="height:220px;">
@@ -231,7 +231,7 @@ nav_order: 13
 <ul>
   <li>The only <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> add pick is Electrike (uncommon). It is a huge signal to play Field.</li>
   <li>The only other conditional is if you hit Plusle/Minun and Raikou. If either of these things happen you should try to play <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 3 or 5.</li>
-  <li><img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 7 is possible if you hit everything and have 1 Thunderstone. This is worth doing, because adding <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> to a Pokemon is better than most items, but the <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 7 boost is very minor.</li>
+  <li><img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 7 is possible if you hit everything and have 1 <img src="../../assets/images/items/THUNDER_STONE.png" style="height:25px;">. This is worth doing, because adding <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> to a Pokemon is better than most items, but the <img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> 7 boost is very minor.</li>
   <li>Mareep and Shinx should be played in all games to get on <img src="../../assets/images/types/LIGHT.svg" style="height:25px;"> 2. Put your Legendary or strongest carry in the <img src="../../assets/images/types/LIGHT.svg" style="height:25px;"> spot.</li>
   <li>There are 5 <img src="../../assets/images/types/FIELD.svg" style="height:25px;">/<img src="../../assets/images/types/ELECTRIC.svg" style="height:25px;"> Pokemon:
     <ul>
@@ -247,7 +247,7 @@ nav_order: 13
 
 <details>
 <summary>Psychic</summary>
-<h3>Both <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> add picks, Stantler, Spoink region, and Dawnstone</h3>
+<h3>Both <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> add picks, Stantler, Spoink region, and <img src="../../assets/images/items/DAWN_STONE.png" style="height:25px;"></h3>
 <div style="display: flex; gap: 16px;">
   <img src="../../assets/images/field/field_psychic_water.png" style="height:220px;">
   <img src="../../assets/images/field/field_psychic_water_synergies.png" style="height:220px;">
@@ -256,13 +256,13 @@ nav_order: 13
   <li>There are 2 <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> add picks. They are Munna (uncommon) and Girafarig (epic).</li>
   <li>The other Pokemon to hit are Espurr (Wild uncommon), Spoink (regional), and Stantler (unique).</li>
   <li>Always pick up Espurr if possible. It is incredible with Stantler, but is also worth playing if you hit a <img src="../../assets/images/types/WILD.svg" style="height:25px;"> legendary (3/4).</li>
-  <li>After you hit Stantler and see epic add picks, evaluate how many <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> Pokemon are in. If there are 4, its usually worthwhile to go for <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> 4. If all 5 are in try to make a Dawnstone and put it on your legendary for <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> 6.</li>
+  <li>After you hit Stantler and see epic add picks, evaluate how many <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> Pokemon are in. If there are 4, its usually worthwhile to go for <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> 4. If all 5 are in try to make a <img src="../../assets/images/items/DAWN_STONE.png" style="height:25px;"> and put it on your legendary for <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> 6.</li>
   <li>Keep an eye out for useful unknowns to play in PvE rounds.</li>
   <li>There are 5 <img src="../../assets/images/types/FIELD.svg" style="height:25px;">/<img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> Pokemon:
     <ul>
-      <li><b>Espurr</b> - Uncommon wild. Pretty mediocre Pokemon, but always take it for synergies later. Not usually worthwhile to roll for on PvE, unless you already have Stantler and know you need it for Psychic. Best friends with Stantler.</li>
-      <li><b>Munna</b> - Rare add pick. Reasonable support. Ability gets quite powerful once on some Psychic levels.</li>
-      <li><b>Spoink</b> - Rare regional. Spoink is quite weak but Grumpig is fairly good, especially with Psychic levels. Grumpig's ability deals 4x the damage of Spoink.</li>
+      <li><b>Espurr</b> - Uncommon wild. Pretty mediocre Pokemon, but always take it for synergies later. Not usually worthwhile to roll for on PvE, unless you already have Stantler and know you need it for <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;">. Best friends with Stantler.</li>
+      <li><b>Munna</b> - Rare add pick. Reasonable support. Ability gets quite powerful once on some <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> levels.</li>
+      <li><b>Spoink</b> - Rare regional. Spoink is quite weak but Grumpig is fairly good, especially with <img src="../../assets/images/types/PSYCHIC.svg" style="height:25px;"> levels. Grumpig's ability deals 4x the damage of Spoink.</li>
       <li><b>Girafarig</b> - Epic add pick. Very strong caster DPS.</li>
       <li><b>Stantler</b> - Unique. Best friends with Espurr. Always wants to be itemized. On t20 it gains stats and becomes stronger than any other Field unqiue. Wants some sustain and mana generation.</li>
     </ul>
