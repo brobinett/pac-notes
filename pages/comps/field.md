@@ -61,43 +61,43 @@ nav_order: 13
   <details>
   <summary>Shiny Item Tier List</summary>
     <ul>
-      <li><img src="../../assets/images/items/shiny_stone.png" style="height:25px;"><b> Shiny Stone</b> - Incredible since you will always be on <img src="../../assets/images/types/LIGHT.svg" style="height:25px;"> in the endgame. Also condsider just pivoting into <img src="../../assets/images/types/LIGHT.svg" style="height:25px;">.</li>
-      <li><img src="../../assets/images/items/rare_candy.png" style="height:25px;"><b> Rare Candy</b> - Stick on a sellable strong add pick Pokemon until you can complete Torracat, Dewott, Vigoroth, Luxio, or Whirlpede. If you get a Scolipede, run a bug.</li>
-      <li><img src="../../assets/images/items/absorb_bulb.png" style="height:25px;"><b> Absorb Bulb</b> - Triples the EHP of the Pokemon wearing it. Put it on your Legendary/strongest carry. Very weak against pure damage.</li>
-      <li><img src="../../assets/images/items/dynamax_band.png" style="height:25px;"><b> Dynamax Band</b> - Strictly worse than Absorb bulb because of the Field healing, but still very good. Put it on your Legendary/strongest carry. Better against Steel, but not burn or poison.</li>
-      <li><img src="../../assets/images/items/eviolite.png" style="height:25px;"><b> Eviolite</b> - Better stats than Absorb Bulb or Dynamax Band but must go on a no fully evolved Pokemon. Stick it on someone sellable until you can get Torracat, Dewott, Vigoroth, Luxio, or Whirlpede.</li>
-      <li><img src="../../assets/images/items/comet_shard.png" style="height:25px;"><b> Comet Shard</b> - Provides good damage and hopefully kills some stuff at the start. Wants to be on high attack Pokemon. The best ones are Luxray, Scolipede, Samurott, Slaking, Granbull, Suicune, Entei, Raikou, Spectrier, Luxio, Beartic, Whirlpede, Farigiraf, Inciniroar.</li>
-      <li><img src="../../assets/images/items/gold_bow.png" style="height:25px;"><b> Gold Bow</b> - Put it on someone in the front. Another Field is never bad. If you have Venipede on 10 run a Bug.</li>
-      <li><img src="../../assets/images/items/repeat_ball.png" style="height:25px;"><b> Repeat Ball</b> - The stats are not super impactful in Field. Probably best to use to try to complete 3 stars. More Field legendaries would be great, but unlikely.</li>
-      <li><img src="../../assets/images/items/gold_bottle_cap.png" style="height:25px;"><b> Gold Bottle Cap</b> - Stick on a carry with other crit items. Great on Delibird.</li>
-      <li><img src="../../assets/images/items/sacred_ash.png" style="height:25px;"><b> Sacred Ash</b> - Hard to time so that it goes off when at least 4 are dead, but while there are still enough alive to benefit and win. Does not want to be on the last one alive.</li>
-      <li><img src="../../assets/images/items/white_flute.png" style="height:25px;"><b> White Flute</b> - This item licks goats. Slightly better in Wild 4.</li>
+      <li><img src="../../assets/images/items/SHINY_STONE.png" style="height:25px;"><b> Shiny Stone</b> - Incredible since you will always be on <img src="../../assets/images/types/LIGHT.svg" style="height:25px;"> in the endgame. Also condsider just pivoting into <img src="../../assets/images/types/LIGHT.svg" style="height:25px;">.</li>
+      <li><img src="../../assets/images/items/RARE_CANDY.png" style="height:25px;"><b> Rare Candy</b> - Stick on a sellable strong add pick Pokemon until you can complete Torracat, Dewott, Vigoroth, Luxio, or Whirlpede. If you get a Scolipede, run a bug.</li>
+      <li><img src="../../assets/images/items/ABSORB_BULB.png" style="height:25px;"><b> Absorb Bulb</b> - Triples the EHP of the Pokemon wearing it. Put it on your Legendary/strongest carry. Very weak against pure damage.</li>
+      <li><img src="../../assets/images/items/DYNAMAX_BAND.png" style="height:25px;"><b> Dynamax Band</b> - Strictly worse than Absorb bulb because of the Field healing, but still very good. Put it on your Legendary/strongest carry. Better against Steel, but not burn or poison.</li>
+      <li><img src="../../assets/images/items/EVIOLITE.png" style="height:25px;"><b> Eviolite</b> - Better stats than Absorb Bulb or Dynamax Band but must go on a no fully evolved Pokemon. Stick it on someone sellable until you can get Torracat, Dewott, Vigoroth, Luxio, or Whirlpede.</li>
+      <li><img src="../../assets/images/items/COMET_SHARD.png" style="height:25px;"><b> Comet Shard</b> - Provides good damage and hopefully kills some stuff at the start. Wants to be on high attack Pokemon. The best ones are Luxray, Scolipede, Samurott, Slaking, Granbull, Suicune, Entei, Raikou, Spectrier, Luxio, Beartic, Whirlpede, Farigiraf, Inciniroar.</li>
+      <li><img src="../../assets/images/items/GOLD_BOW.png" style="height:25px;"><b> Gold Bow</b> - Put it on someone in the front. Another Field is never bad. If you have Venipede on 10 run a Bug.</li>
+      <li><img src="../../assets/images/items/REPEAT_BALL.png" style="height:25px;"><b> Repeat Ball</b> - The stats are not super impactful in Field. Probably best to use to try to complete 3 stars. More Field legendaries would be great, but unlikely.</li>
+      <li><img src="../../assets/images/items/GOLD_BOTTLE_CAP.png" style="height:25px;"><b> Gold Bottle Cap</b> - Stick on a carry with other crit items. Great on Delibird.</li>
+      <li><img src="../../assets/images/items/SACRED_ASH.png" style="height:25px;"><b> Sacred Ash</b> - Hard to time so that it goes off when at least 4 are dead, but while there are still enough alive to benefit and win. Does not want to be on the last one alive.</li>
+      <li><img src="../../assets/images/items/WHITE_FLUTE.png" style="height:25px;"><b> White Flute</b> - This item licks goats. Slightly better in Wild 4.</li>
     </ul>
   </details>
   <details>
   <summary>Artificial Item Tier List</summary>
     <ul>
-      <li><img src="../../assets/images/items/running_shoes.png" style="height:25px;"><b> Running Shoes</b> - Fit in any non Field unit. Good choices to fit in a Bug, Wild 4, a random ultra that benefits from Field (Porygon, Grookey, Happiny, Teddiursa).</li>
-      <li><img src="../../assets/images/items/light_ball.png" style="height:25px;"><b> Light Ball</b> - Incredible since you will always be on <img src="../../assets/images/types/LIGHT.svg" style="height:25px;"> in the endgame.</li>
-      <li><img src="../../assets/images/items/tiny_mushroom.png" style="height:25px;"><b> Tiny Mushroom</b> - Incredible once you have Venipede but not especially useful before that. It probably best to duplicate the Venipede since it won't lose max hp.</li>
-      <li><img src="../../assets/images/items/exp_share.png" style="height:25px;"><b> Exp Share</b> - Great if you have the items for it. You usually want to itemize your legendary and put this on the Pokemon next to it. Also great next to Furfrou. Can copy Psychic AP buff as well. A lot of the uniques are good carriers, notably Miltank. A lot of the strong Field Pokemon have over 25 attack. High defense: Furfrou, Samurott, Incineroar, Camerupt. High SpDef: Spectrier, Grumpig, Camerupt.</li>
-      <li><img src="../../assets/images/items/cooking_pot.png" style="height:25px;"><b> Cooking Pot</b> - Need Flame Orb. Incredibly good with Fidough and <img src="../../assets/images/types/GOURMET.svg" style="height:25px;"> Miltank.</li>
-      <li><img src="../../assets/images/items/incense.png" style="height:25px;"><b> Incense</b> - Put this on Mareep to search for Luxios.</li>
-      <li><img src="../../assets/images/items/magmarizer.png" style="height:25px;"><b> Magmarizer</b> - Stick on a bulky carry. Good vs healing comps.</li>
-      <li><img src="../../assets/images/items/silk_scarf.png" style="height:25px;"><b> Silk Scarf</b> - Great if you are in Normal. It should go on the Pokemon in the middle of the box.</li>
-      <li><img src="../../assets/images/items/metal_coat.png" style="height:25px;"><b> Metal Coat</b> - Just great defensive stats.</li>
-      <li><img src="../../assets/images/items/toxic_orb.png" style="height:25px;"><b> Toxic Orb</b> - Slightly better Flame Orb. Rarely puts you on Poison 3 with Nidoran and Venipede.</li>
-      <li><img src="../../assets/images/items/max_elixir.png" style="height:25px;"><b> Max Elixir</b> - A lot better if in Psychic or have a dedicated caster. Works very well on Stantler, Miltank, and Oshawott.</li>
-      <li><img src="../../assets/images/items/air_balloon.png" style="height:25px;"><b> Air Balloon</b> - Just attack speed and dodge. Gives 11% more EHP.</li>
-      <li><img src="../../assets/images/items/electirizer.png" style="height:25px;"><b> Electirizer</b> - Attack speed with a mostly useless bonus effect.</li>
-      <li><img src="../../assets/images/items/surfboard.png" style="height:25px;"><b> Surfboard</b> - Attack speed with a bonus for having Buizel or Chubchoo add picks.</li>
-      <li><img src="../../assets/images/items/macho_brace.png" style="height:25px;"><b> Macho Brace</b> - Gives pretty good damage and the attack speed will not matter after a few stack of Field. Miensfoo and Oshawott give a small bonus.</li>
-      <li><img src="../../assets/images/items/pokerus_vial.png" style="height:25px;"><b> Pokerus Vial</b> - The effect of this is pretty minor. Put on a Pokemon that will live a while.</li>
-      <li><img src="../../assets/images/items/metronome.png" style="height:25px;"><b> Metronome</b> - Pretty good caster item. If you have Minccinno you can put it on one of the many low cost ability Field Pokemon (Zigzagoon, Mienfoo, Ponyta, Snubbull, Buizel, Shinx, Plusle/Minun, Snivy, Scorbunny) to generate attack.</li>
-      <li><img src="../../assets/images/items/hard_stone.png" style="height:25px;"><b> Hard Stone</b> - Just 100 shields unless you have Greavard or Hisuian Growlithe.</li>
-      <li><img src="../../assets/images/items/berserk_gene.png" style="height:25px;"><b> Berserk Gene</b> - Just 5 damage. Not worth 10 gold.</li>
-      <li><img src="../../assets/images/items/rotom_phone.png" style="height:25px;"><b> Rotom Phone</b> - Does nothing unless you have Greavard or Spectrier.</li>
-      <li><img src="../../assets/images/items/explorer_kit.png" style="height:25px;"><b> Explorer Kit</b> - Lets you dig holes with Nidoran, Sentrent, or Numel. If you dug this up, there won't be much else of value in the holes.</li>
+      <li><img src="../../assets/images/items/RUNNING_SHOES.png" style="height:25px;"><b> Running Shoes</b> - Fit in any non Field unit. Good choices to fit in a Bug, Wild 4, a random ultra that benefits from Field (Porygon, Grookey, Happiny, Teddiursa).</li>
+      <li><img src="../../assets/images/items/LIGHT_BALL.png" style="height:25px;"><b> Light Ball</b> - Incredible since you will always be on <img src="../../assets/images/types/LIGHT.svg" style="height:25px;"> in the endgame.</li>
+      <li><img src="../../assets/images/items/TINY_MUSHROOM.png" style="height:25px;"><b> Tiny Mushroom</b> - Incredible once you have Venipede but not especially useful before that. It probably best to duplicate the Venipede since it won't lose max hp.</li>
+      <li><img src="../../assets/images/items/EXP_SHARE.png" style="height:25px;"><b> Exp Share</b> - Great if you have the items for it. You usually want to itemize your legendary and put this on the Pokemon next to it. Also great next to Furfrou. Can copy Psychic AP buff as well. A lot of the uniques are good carriers, notably Miltank. A lot of the strong Field Pokemon have over 25 attack. High defense: Furfrou, Samurott, Incineroar, Camerupt. High SpDef: Spectrier, Grumpig, Camerupt.</li>
+      <li><img src="../../assets/images/items/COOKING_POT.png" style="height:25px;"><b> Cooking Pot</b> - Need Flame Orb. Incredibly good with Fidough and <img src="../../assets/images/types/GOURMET.svg" style="height:25px;"> Miltank.</li>
+      <li><img src="../../assets/images/items/INCENSE.png" style="height:25px;"><b> Incense</b> - Put this on Mareep to search for Luxios.</li>
+      <li><img src="../../assets/images/items/MAGMARIZER.png" style="height:25px;"><b> Magmarizer</b> - Stick on a bulky carry. Good vs healing comps.</li>
+      <li><img src="../../assets/images/items/SILK_SCARF.png" style="height:25px;"><b> Silk Scarf</b> - Great if you are in Normal. It should go on the Pokemon in the middle of the box.</li>
+      <li><img src="../../assets/images/items/METAL_COAT.png" style="height:25px;"><b> Metal Coat</b> - Just great defensive stats.</li>
+      <li><img src="../../assets/images/items/TOXIC_ORB.png" style="height:25px;"><b> Toxic Orb</b> - Slightly better Flame Orb. Rarely puts you on Poison 3 with Nidoran and Venipede.</li>
+      <li><img src="../../assets/images/items/MAX_ELIXIR.png" style="height:25px;"><b> Max Elixir</b> - A lot better if in Psychic or have a dedicated caster. Works very well on Stantler, Miltank, and Oshawott.</li>
+      <li><img src="../../assets/images/items/AIR_BALLOON.png" style="height:25px;"><b> Air Balloon</b> - Just attack speed and dodge. Gives 11% more EHP.</li>
+      <li><img src="../../assets/images/items/ELECTIRIZER.png" style="height:25px;"><b> Electirizer</b> - Attack speed with a mostly useless bonus effect.</li>
+      <li><img src="../../assets/images/items/SURFBOARD.png" style="height:25px;"><b> Surfboard</b> - Attack speed with a bonus for having Buizel or Chubchoo add picks.</li>
+      <li><img src="../../assets/images/items/MACHO_BRACE.png" style="height:25px;"><b> Macho Brace</b> - Gives pretty good damage and the attack speed will not matter after a few stack of Field. Miensfoo and Oshawott give a small bonus.</li>
+      <li><img src="../../assets/images/items/POKERUS_VIAL.png" style="height:25px;"><b> Pokerus Vial</b> - The effect of this is pretty minor. Put on a Pokemon that will live a while.</li>
+      <li><img src="../../assets/images/items/METRONOME.png" style="height:25px;"><b> Metronome</b> - Pretty good caster item. If you have Minccinno you can put it on one of the many low cost ability Field Pokemon (Zigzagoon, Mienfoo, Ponyta, Snubbull, Buizel, Shinx, Plusle/Minun, Snivy, Scorbunny) to generate attack.</li>
+      <li><img src="../../assets/images/items/HARD_STONE.png" style="height:25px;"><b> Hard Stone</b> - Just 100 shields unless you have Greavard or Hisuian Growlithe.</li>
+      <li><img src="../../assets/images/items/BERSERK_GENE.png" style="height:25px;"><b> Berserk Gene</b> - Just 5 damage. Not worth 10 gold.</li>
+      <li><img src="../../assets/images/items/ROTOM_PHONE.png" style="height:25px;"><b> Rotom Phone</b> - Does nothing unless you have Greavard or Spectrier.</li>
+      <li><img src="../../assets/images/items/EXPLORER_KIT.png" style="height:25px;"><b> Explorer Kit</b> - Lets you dig holes with Nidoran, Sentrent, or Numel. If you dug this up, there won't be much else of value in the holes.</li>
     </ul>
   </details>
 </ul>
