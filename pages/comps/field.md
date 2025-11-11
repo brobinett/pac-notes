@@ -97,7 +97,7 @@ nav_order: 13
       <li><img src="../../assets/images/items/HARD_STONE.png" style="height:25px;"><b> Hard Stone</b> - Just 100 shields unless you have Greavard or Hisuian Growlithe.</li>
       <li><img src="../../assets/images/items/BERSERK_GENE.png" style="height:25px;"><b> Berserk Gene</b> - Just 5 damage. Not worth 10 gold.</li>
       <li><img src="../../assets/images/items/ROTOM_PHONE.png" style="height:25px;"><b> Rotom Phone</b> - Does nothing unless you have Greavard or Spectrier.</li>
-      <li><img src="../../assets/images/items/EXPLORER_KIT.png" style="height:25px;"><b> Explorer Kit</b> - Lets you dig holes with Nidoran, Sentrent, or Numel. If you dug this up, there won't be much else of value in the holes.</li>
+      <li><img src="../../assets/images/items/EXPLORER_KIT.png" style="height:25px;"><b> Explorer Kit</b> - Lets you dig holes with Nidoran, Sentret, or Numel. If you dug this up, there won't be much else of value in the holes.</li>
     </ul>
   </details>
 </ul>

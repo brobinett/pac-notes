@@ -64,7 +64,7 @@ nav_order: 30
   <li><b>Koffing</b> - Poison; Artificial with Castform unique (check artifact item early!)</li>
   <li><b>Omanyte</b> - Water; needs Dewpider → Castform/Pyukumuku unique OR water/ground Shellos region</li>
   <li><b>Dewpider</b> - Water (same as Omanyte); Bug with Caterpie</li>
-  <li><b>Sandyghast</b> - Ghost; Ground with Silicobra and Water/Ground Shellos region</li>
+  <li><b>Sandygast</b> - Ghost; Ground with Silicobra and Water/Ground Shellos region</li>
 </ul>
 
 <h3>Rare Adds</h3>
@@ -72,7 +72,7 @@ nav_order: 30
   <li><b>Slugma</b> - Fire with Castform unique; Rock with Aquatic/Rock Shellos region and Nihilego legendary</li>
   <li><b>Wynaut/Munna</b> - Psychic with each other, Solosis, or Mew/Deoxys legendary (Baby/Wild irrelevant)</li>
   <li><b>Drifloon</b> - Ghost; Flying overlaps with Butterfree or non-amorphous Pokemon</li>
-  <li><b>Silicobra</b> - Ground with Sandyghast</li>
+  <li><b>Silicobra</b> - Ground with Sandygast</li>
 </ul>
 
 <h3>Epic Adds</h3>

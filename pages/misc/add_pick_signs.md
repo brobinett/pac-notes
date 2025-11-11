@@ -120,13 +120,13 @@ nav_order: 1
     "Growlithe": "Fire/Field",
     "Psyduck": "Water/Psychic",
     "Slowpoke": "Water/Psychic",
-    "Shelder": "Rock/Ice",
+    "Shellder": "Rock/Ice",
     "Chinchou": "Electric/Light",
     "Voltorb": "Electric/Artificial",
-    "Ladyba": "Vertical Fighting",
+    "Ledyba": "Vertical Fighting",
     "Venonat": "Bug/Poison",
     "Smoochum": "Human Psychic, Baby 7",
-    "Mime Jr": "Human Psychic, Baby 7",
+    "Mime_Jr": "Human Psychic, Baby 7",
     "Pineco": "Vertical Steel, Bug/Steel",
     "Skrelp": "Dragon/Water, Dragon Aquatic",
     "Tentacool": "Poison Aquatic",
@@ -134,7 +134,7 @@ nav_order: 1
     "Minccino": "Sound/Normal",
     "Greavard": "Field, Ghost with Spiritomb",
     "Petilil": "Grass/Flora, Grass/Fighting",
-    "Sandyghast": "Ghost/Amorph/Artificial",
+    "Sandygast": "Ghost/Amorph/Artificial",
     "Sinistea": "Ghost/Amorph/Artificial",
     "Capsakid": "Gourmet, Alcremie Combo",
     "Seel": "Ice/Aquatic",
@@ -147,7 +147,7 @@ nav_order: 1
     "Clobbopus": "Aquatic/Amorph",
     "Paras": "Bug/Poison",
     "Sunkern": "Flora/Light",
-    "Formantis": "Flora/Light",
+    "Fomantis": "Flora/Light",
     "Shroomish": "Grass/Fighting with Lilligant",
     "Vulpix": "Psychic",
     "Natu": "Psychic",
@@ -156,7 +156,7 @@ nav_order: 1
     "Electrike": "Field/Electric",
     "Munna": "Field/Psychic",
     "Meowth": "Field Normal",
-    "Sentrent": "Field Normal",
+    "Sentret": "Field Normal",
     "Nickit": "3+ Field adds - Vertical Field",
     "Fidough": "3+ Field adds - Vertical Field",
     "Nymble": "Kleavor/Skorupi",
@@ -167,9 +167,9 @@ nav_order: 1
     "Chewtle": "Rock/Monster",
     "Yanma": "Fossil/Bug",
     "Surskit": "Bug/Aquatic",
-    "Driftloon": "Ghost/Amorph/Artificial",
+    "Drifloon": "Ghost/Amorph/Artificial",
     "Golett": "Ghost/Amorph/Artificial",
-    "Swirlx": "Fairy/Gourmet"
+    "Swirlix": "Fairy/Gourmet"
   };
   
   var conditionalSections = [
@@ -180,9 +180,9 @@ nav_order: 1
       content: "Water/Psychic synergy"
     },
     {
-      id: "ladyba-venonat-bug-flying",
-      requires: ["Ladyba", "Venonat"],
-      title: "Ladyba + Venonat",
+      id: "ledyba-venonat-bug-flying",
+      requires: ["Ledyba", "Venonat"],
+      title: "Ledyba + Venonat",
       content: "Bug/Flying synergy"
     },
     {
@@ -198,9 +198,9 @@ nav_order: 1
       content: "Field/Normal synergy"
     },
     {
-      id: "sandyghast-sinistea-ghost-amorph",
-      requires: ["Sandyghast", "Sinistea"],
-      title: "Sandyghast + Sinistea",
+      id: "sandygast-sinistea-ghost-amorph",
+      requires: ["Sandygast", "Sinistea"],
+      title: "Sandygast + Sinistea",
       content: "Ghost/Amorph/Artificial synergy"
     },
     {
@@ -234,9 +234,9 @@ nav_order: 1
       content: "Bug/Poison synergy"
     },
     {
-      id: "sunkern-formantis-flora-light",
-      requires: ["Sunkern", "Formantis"],
-      title: "Sunkern + Formantis",
+      id: "sunkern-fomantis-flora-light",
+      requires: ["Sunkern", "Fomantis"],
+      title: "Sunkern + Fomantis",
       content: "Flora/Light synergy"
     },
     {
@@ -252,9 +252,9 @@ nav_order: 1
       content: "Water/Psychic synergy - strong combination"
     },
     {
-      id: "meowth-sentrent-field-normal",
-      requires: ["Meowth", "Sentrent"],
-      title: "Meowth + Sentrent",
+      id: "meowth-sentret-field-normal",
+      requires: ["Meowth", "Sentret"],
+      title: "Meowth + Sentret",
       content: "Field Normal synergy"
     },
     {
@@ -282,15 +282,15 @@ nav_order: 1
       content: "Bug/Aquatic synergy"
     },
     {
-      id: "driftloon-golett-ghost-amorph",
-      requires: ["Driftloon", "Golett"],
-      title: "Driftloon + Golett",
+      id: "drifloon-golett-ghost-amorph",
+      requires: ["Drifloon", "Golett"],
+      title: "Drifloon + Golett",
       content: "Ghost/Amorph/Artificial synergy"
     },
     {
-      id: "fidough-swirlx-fairy-gourmet",
-      requires: ["Fidough", "Swirlx"],
-      title: "Fidough + Swirlx",
+      id: "fidough-swirlix-fairy-gourmet",
+      requires: ["Fidough", "Swirlix"],
+      title: "Fidough + Swirlix",
       content: "Fairy/Gourmet synergy"
     }
   ];
@@ -298,19 +298,19 @@ nav_order: 1
   var selectedPokemon = new Set();
   
   var uncommonPokemon = [
-    "Growlithe", "Psyduck", "Slowpoke", "Shelder", "Chinchou", "Voltorb",
-    "Ladyba", "Venonat", "Smoochum", "Mime Jr", "Pineco", "Skrelp",
-    "Tentacool", "Skitty", "Minccino", "Greavard", "Petilil", "Sandyghast",
+    "Growlithe", "Psyduck", "Slowpoke", "Shellder", "Chinchou", "Voltorb",
+    "Ledyba", "Venonat", "Smoochum", "Mime_Jr", "Pineco", "Skrelp",
+    "Tentacool", "Skitty", "Minccino", "Greavard", "Petilil", "Sandygast",
     "Sinistea", "Capsakid", "Seel", "Anorith", "Archen", "Koffing",
     "Grimer", "Omanyte", "Dewpider", "Clobbopus", "Paras", "Sunkern",
-    "Formantis", "Shroomish"
+    "Fomantis", "Shroomish"
   ];
   
   var rarePokemon = [
     "Vulpix", "Natu", "Staryu", "Clauncher", "Electrike", "Munna",
-    "Meowth", "Sentrent", "Nickit", "Fidough", "Nymble", "Elgyem",
+    "Meowth", "Sentret", "Nickit", "Fidough", "Nymble", "Elgyem",
     "Croagunk", "Wooper", "Tyrunt", "Chewtle", "Yanma", "Surskit",
-    "Driftloon", "Golett", "Swirlx"
+    "Drifloon", "Golett", "Swirlix"
   ];
   
   function init() {
@@ -321,7 +321,12 @@ nav_order: 1
     Object.keys(pokemonData).forEach(function(pokemon) {
       var btn = document.createElement('button');
       btn.className = 'pokemon-btn';
-      btn.textContent = pokemon;
+      var img = document.createElement('img');
+      img.src = '../../assets/images/pokemon/' + pokemon.toLowerCase() + '.png';
+      img.alt = pokemon;
+      img.style.height = '40px';
+      img.title = pokemon;
+      btn.appendChild(img);
       btn.id = 'btn-' + pokemon;
       btn.addEventListener('click', function() { togglePokemon(pokemon); });
       
