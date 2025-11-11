@@ -336,18 +336,20 @@ nav_order: 1
         rareContainer.appendChild(btn);
       }
       
-      var section = document.createElement('div');
-      section.className = 'content-section';
-      section.id = 'section-' + pokemon;
-      section.innerHTML = '<div class="section-title">' + pokemon + '</div><div>' + pokemonData[pokemon] + '</div>';
-      contentContainer.appendChild(section);
+      if (pokemonData[pokemon] !== "") {
+        var section = document.createElement('div');
+        section.className = 'content-section';
+        section.id = 'section-' + pokemon;
+        section.innerHTML = '<div class="section-title">' + pokemon + '</div><div>' + pokemonData[pokemon] + '</div>';
+        contentContainer.appendChild(section);
+      }
     });
     
     conditionalSections.forEach(function(condSection) {
       var section = document.createElement('div');
       section.className = 'content-section conditional-section';
       section.id = 'section-' + condSection.id;
-      section.innerHTML = '<div class="section-title" style="color: #0066cc;">✨ ' + condSection.title + '</div><div>' + condSection.content + '</div>';
+      section.innerHTML = '<div class="section-title" style="color: #0066cc;">âœ¨ ' + condSection.title + '</div><div>' + condSection.content + '</div>';
       contentContainer.appendChild(section);
     });
     
@@ -376,11 +378,15 @@ nav_order: 1
     if (selectedPokemon.has(pokemon)) {
       selectedPokemon.delete(pokemon);
       btn.classList.remove('selected');
-      section.classList.remove('visible');
+      if (section) {
+        section.classList.remove('visible');
+      }
     } else {
       selectedPokemon.add(pokemon);
       btn.classList.add('selected');
-      section.classList.add('visible');
+      if (section) {
+        section.classList.add('visible');
+      }
     }
     
     checkConditionalSections();
