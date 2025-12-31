@@ -13,6 +13,8 @@ nav_order: 1
   <div id="uncommon-buttons" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;"></div>
   <h4 style="margin-top: 15px; margin-bottom: 8px; color: #666;">Rare</h4>
   <div id="rare-buttons" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;"></div>
+  <h4 style="margin-top: 15px; margin-bottom: 8px; color: #666;">Epic</h4>
+  <div id="epic-buttons" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;"></div>
   <button id="clear-all-btn" style="margin-bottom: 20px; padding: 5px 15px;">Clear All</button>
 </div>
 
@@ -145,6 +147,24 @@ nav_order: 1
     "Omanyte": "Water/Bug/Amorph",
     "Dewpider": "Water/Bug/Amorph",
     "Clobbopus": "Aquatic/Amorph",
+    "Sandshrew": "",
+    "Diglett": "",
+    "Krabby": "",
+    "Hoothoot": "",
+    "Bidoof": "",
+    "Glameow": "",
+    "Tangela": "",
+    "Cottonee": "",
+    "Wiglett": "",
+    "Scraggy": "",
+    "Clobbopus": "",
+    "Woobat": "",
+    "Ekans": "",
+    "Corphish": "",
+    "Purrloin": "",
+    "Zorua": "",
+    "Nosepass": "",
+    "Cranidos": "",
     "Paras": "Bug/Poison",
     "Sunkern": "Flora/Light",
     "Fomantis": "Flora/Light",
@@ -169,7 +189,80 @@ nav_order: 1
     "Surskit": "Bug/Aquatic",
     "Drifloon": "Ghost/Amorph/Artificial",
     "Golett": "Ghost/Amorph/Artificial",
-    "Swirlix": "Fairy/Gourmet"
+    "Swirlix": "Fairy/Gourmet",
+    "Goldeen": "",
+    "Patrat": "",
+    "Deerling_Spring": "",
+    "Deerling_Summer": "",
+    "Deerling_Autumn": "",
+    "Deerling_Winter": "",
+    "Cacnea": "",
+    "Lileep": "",
+    "Phantump": "",
+    "Slugma": "",
+    "Salandit": "",
+    "Kabuto": "",
+    "Carvanha": "",
+    "Finneon": "",
+    "Binacle": "",
+    "Joltik": "",
+    "Makuhita": "",
+    "Riolu": "",
+    "Mienfoo": "",
+    "Pancham": "",
+    "Crabrawler": "",
+    "Wynaut": "",
+    "Bronzor": "",
+    "Vullaby": "",
+    "Shieldon": "",
+    "Drilbur": "",
+    "Wooper": "",
+    "Silicobra": "",
+    "Glimmet": "",
+    "Noibat": "",
+    "Yamask": "",
+    "Snom": "",
+    "Swirlix": "",
+    "Kricketot": "",
+    "Girafarig": "",
+    "Munchlax": "Gourmet/Monster Snorlax carry",
+    "Hippopotas": "",
+    "Helioptile": "",
+    "Stufful": "",
+    "Ferroseed": "",
+    "Pumpkaboo": "",
+    "Ponyta": "",
+    "Houndour": "",
+    "Larvesta": "",
+    "Wingull": "",
+    "Wailmer": "",
+    "Barboach": "",
+    "Clamperl": "",
+    "Buizel": "",
+    "Wimpod": "",
+    "Wattrel": "",
+    "Meditite": "",
+    "Exeggcute": "",
+    "Baltoy": "",
+    "Inkay": "",
+    "Murkrow": "",
+    "Sneasel": "",
+    "Stunky": "",
+    "Skorupi": "",
+    "Onix": "",
+    "Cubone": "",
+    "Gulpin": "",
+    "Trubbish": "",
+    "Snubbull": "",
+    "Cubchoo": "",
+    "Nincada": "",
+    "Combee": "",
+    "Bonsly": "",
+    "Carbink": "",
+    "Misdreavus": "",
+    "Shuppet": "",
+    "Swablu": "",
+    "Amaura": "",
   };
   
   var conditionalSections = [
@@ -292,6 +385,18 @@ nav_order: 1
       requires: ["Fidough", "Swirlix"],
       title: "Fidough + Swirlix",
       content: "Fairy/Gourmet synergy"
+    },
+    {
+      id: "munchlax-capsakid-monster-gourmet",
+      requires: ["Munchlax", "Capsakid"],
+      title: "Munchlax + Capsakid",
+      content: "Snorlax Carry with Capsakid"
+    },
+    {
+      id: "fire-field",
+      requires: ["Ponyta", "Growlithe"],
+      title: "Ponyta + Growlithe",
+      content: "Field/Fire with Numel region"
     }
   ];
   
@@ -302,20 +407,39 @@ nav_order: 1
     "Ledyba", "Venonat", "Smoochum", "Mime_Jr", "Pineco", "Skrelp",
     "Tentacool", "Skitty", "Minccino", "Greavard", "Petilil", "Sandygast",
     "Sinistea", "Capsakid", "Seel", "Anorith", "Archen", "Koffing",
-    "Grimer", "Omanyte", "Dewpider", "Clobbopus", "Paras", "Sunkern",
-    "Fomantis", "Shroomish"
+    "Grimer", "Omanyte", "Dewpider", "Clobbopus",  
+    "Shroomish", "Sandshrew", "Diglett", "Krabby", "Hoothoot",
+    "Bidoof", "Glameow", "Tangela", "Cottonee", "Wiglett", "Scraggy",
+    "Clobbopus", "Woobat", "Ekans", "Corphish", "Purrloin", "Zorua",
+    "Nosepass", "Cranidos",
   ];
   
   var rarePokemon = [
     "Vulpix", "Natu", "Staryu", "Clauncher", "Electrike", "Munna",
     "Meowth", "Sentret", "Nickit", "Fidough", "Nymble", "Elgyem",
     "Croagunk", "Wooper", "Tyrunt", "Chewtle", "Yanma", "Surskit",
-    "Drifloon", "Golett", "Swirlix"
+    "Drifloon", "Golett", "Swirlix", "Sunkern", "Paras", "Fomantis", 
+    "Cacnea", "Lileep", "Phantump", "Slugma", "Salandit", "Kabuto",
+    "Carvanha", "Finneon", "Binacle", "Joltik", "Makuhita", "Riolu",
+    "Mienfoo", "Pancham", "Crabrawler", "Wynaut", "Bronzor", "Vullaby",
+    "Shieldon", "Drilbur", "Wooper", "Silicobra", "Glimmet", "Noibat",
+    "Yamask", "Snom", "Swirlix", "Kricketot",
+  ];
+
+  var epicPokemon = [
+    "Girafarig", "Munchlax", "Hippopotas", "Helioptile", "Stufful",
+    "Ferroseed", "Pumpkaboo", "Ponyta", "Houndour", "Larvesta",
+    "Wingull", "Wailmer", "Barboach", "Clamperl", "Buizel", "Wimpod",
+    "Wattrel", "Meditite", "Exeggcute", "Baltoy", "Inkay", "Murkrow",
+    "Sneasel", "Stunky", "Skorupi", "Onix", "Cubone", "Gulpin",
+    "Trubbish", "Snubbull", "Cubchoo", "Nincada", "Combee", "Bonsly",
+    "Carbink", "Misdreavus", "Shuppet", "Swablu", "Amaura",
   ];
   
   function init() {
     var uncommonContainer = document.getElementById('uncommon-buttons');
     var rareContainer = document.getElementById('rare-buttons');
+    var epicContainer = document.getElementById('epic-buttons');
     var contentContainer = document.getElementById('content-sections');
     
     Object.keys(pokemonData).forEach(function(pokemon) {
@@ -334,6 +458,8 @@ nav_order: 1
         uncommonContainer.appendChild(btn);
       } else if (rarePokemon.indexOf(pokemon) !== -1) {
         rareContainer.appendChild(btn);
+      } else if (epicPokemon.indexOf(pokemon) !== -1) {
+        epicContainer.appendChild(btn);
       }
       
       if (pokemonData[pokemon] !== "") {
@@ -349,7 +475,7 @@ nav_order: 1
       var section = document.createElement('div');
       section.className = 'content-section conditional-section';
       section.id = 'section-' + condSection.id;
-      section.innerHTML = '<div class="section-title" style="color: #0066cc;">âœ¨ ' + condSection.title + '</div><div>' + condSection.content + '</div>';
+      section.innerHTML = '<div class="section-title" style="color: #0066cc;">✨ ' + condSection.title + '</div><div>' + condSection.content + '</div>';
       contentContainer.appendChild(section);
     });
     
