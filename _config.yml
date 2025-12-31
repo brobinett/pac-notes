@@ -3,3 +3,9 @@ description: My PAC notes
 theme: just-the-docs
 
 url: https://brobinett.github.io/pac-notes
+
+# Exclude the submodule from Jekyll processing
+exclude:
+  - _pokemonAutoChess/
+  - .git/
+  - .gitmodules
