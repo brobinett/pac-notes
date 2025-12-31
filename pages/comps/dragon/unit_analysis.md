@@ -5,45 +5,36 @@ parent: Dragon
 nav_order: 20
 ---
 
-standard/regional
+Standard/regional:
 
-chamander
-horsea
-bagon
-dratini
-trapinch -> vibrava
-deino (regional)
-gible
-goomy
-jangmo-o (regional)
-frigibax
+chamander: Charmeleon can be a great early game carry for dragon. An incredible amulet coin holder.
+horsea: Seadra is dragon's default midgame carry
+bagon:
+dratini: Part of the aquatic dragon package. 
+trapinch -> vibrava: Vibrava can be kind of awkward to put together when fishing for gyarados, but a good unit when you do get it.
+deino (regional): A backliner, solid item holder for caster items when unique is a frontliner. Keep a deino around on the bench in case of Roaring Moon in order to hit dragon7/dark5 at level 8.
+gible:
+goomy: Part of the aquatic dragon package. Enables amorph3 splash, which can actually be pretty decent in dragon due to all the extra synergies.
+jangmo-o (regional): Mostly only relevant when attempting to play sound as a side synergy.
+frigibax: 
 
-skrelp
-noibat
+Add picks:
+Uncommon:
+skrelp: An aquatic synergy filler. Enables dragon7/aquatic4 at level 7. 
+noibat: Range 2 and high speed makes it a good physical damage carry in the midgame. Also enables sound boards. 
 
-tyrunt
+Rare:
+tyrunt: rock for weather stones is nice, fossil has lots of overlap in dragon. 
 
-swablu -> altaria
-exeggcute -> alolan exeggcutor (regional)
+Epic:
+swablu -> altaria: altaria is an important backliner
+exeggcute -> alolan exeggcutor (regional): alolan exeggutor is basically irrelevant. if you have latis, maybe it can help you hit psychic 7
 
+Hatches:
+dreepy: Range 2, high speed, a fantastic physical damage backliner. Can work as a caster if necessary. Slam carry items in the midgame if your unique isn't a carry.
+axew: Weak as an individual unit, but enables some otherwise impossible endgame boards. Generally not worth itemizing beyond the synergy item, flame orb + safety goggles is a trap here. At worst, still decent as a free 3* dragon and ice stone for ice 4/6 with bax and kyurem or water stone to hit water 9 (if you managed to fish gyarados after baby 3 opening).
 
-hatches:
-    dreepy: range 2, high speed. great physical backliner. 
-    axew: generally not worth itemizing beyond the synergy item. still decent as a free 3* dragon. fluffy tail is a trap
-
-add picks:
-uncommon and rare add picks help you get dragon 5 in for gyarados
-
-    uncommon:
-        skrelp: an important synergy filler for aquatic/dragon.
-    rare:
-        noibat: high attack speed and range 2, can be a nice midgame carry with physical attacking items
-        tyrunt: rock for weather stones is nice, fossil has lots of overlap in dragon. 
-    epic:
-        swablu: altaria is an important backliner. 
-        exeggcute: alolan exeggutor is basically irrelevant. if you have latis, maybe it can help you hit psychic 6. 
-
-uniques:
+Uniques:
 
 applin:
     flapple: TODO
@@ -72,7 +63,7 @@ poipole: unplayable after the changes, also possibly bugged? TODO
 kecleon: makes dragon 7 water 9 very achievable. a bruiser, likes muscle band.
 
 
-legendaries:
+Legendaries:
 
 dialga: deep sea tooth is nice.
 
