@@ -35,13 +35,11 @@ jobs:
           submodules: true
       - name: Copy PAC assets
         run: |
-          # Remove symlinks
           rm -f assets/images/portraits assets/images/types assets/images/items
-          # Create directory and copy real files
           mkdir -p assets/images
-          cp -r _pokemonAutoChess/app/public/src/assets/portraits assets/images/
-          cp -r _pokemonAutoChess/app/public/src/assets/types assets/images/
-          cp -r _pokemonAutoChess/app/public/src/assets/item assets/images/items
+          cp -r _pokemonAutoChess/app/public/src/assets/portraits assets/images/portraits
+          cp -r _pokemonAutoChess/app/public/src/assets/types{tps} assets/images/types
+          cp -r _pokemonAutoChess/app/public/src/assets/item{tps} assets/images/items
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
