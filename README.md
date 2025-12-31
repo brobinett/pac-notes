@@ -2,11 +2,16 @@ Visit the live site at: https://brobinett.github.io/pac-notes/
 
 # Dependencies
 
+Pokemon Auto Chess
+
 [Jekyll](https://jekyllrb.com), [Bundler](https://bundler.io)
 
 [Github Pages](https://docs.github.com/en/pages)
 
 ## Building locally
+
+After cloning, set up PAC submodule by running
+`git submodule update --init`
 
 Run `bundle install`.
 
