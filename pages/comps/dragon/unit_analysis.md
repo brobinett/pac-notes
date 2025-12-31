@@ -67,11 +67,11 @@ Legendaries:
 
 dialga: deep sea tooth is nice.
 
-eternatus: high speed, likes attack damage items. good wide lens user. poison with skrelp/poipole?
+eternatus: One of the worst dragon legendaries. high speed, likes attack damage items. good wide lens user. poison with skrelp/poipole?
 
-giratina: usually wants to be a backliner. backliner also has flying synergy
+giratina: Usually wants to be a backliner in dragon since they're hard to come by. Backline version notably has flying synergy.
 
-kyurem: obviously should always put in frigibax for ice 4. At level 9 you can hit ice 6. example board water 6 ice 6 with shellder and piplup, ice 8 with axew
+kyurem: obviously should always put in frigibax for ice 4. At level 9 you can hit dragon7/ice6. example board water 6 ice 6 with shellder and piplup, ice 8 with axew
 
 palkia: easy dragon 7 water 9 with gyarados and horsea.
 

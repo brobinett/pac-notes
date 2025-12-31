@@ -5,6 +5,8 @@ parent: Dragon
 nav_order: 30
 ---
 
-    components
-    shiny
-    tools
+components
+shiny
+tools
+
+dragon scale
