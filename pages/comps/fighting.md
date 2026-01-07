@@ -18,3 +18,15 @@ If Shroomish and Petilil are in, and you have Hisuian Petilil region you can con
 lategame wincon is get a boosting legendary, give it tank items + revive. These are okidogi (needs fluffy tail), buzzwole (wants a bug to dup), and marshadow
 
 always build rocky helmet revive
+
+
+
+
+how does tyrogue evolution work with crafted items
+
+it uses the first/left component in the item's formula, according to the wiki/tooltip
+e.g. 
+Flame Orb = Charcoal + Heart Scale
+So it uses the Charcoal to choose Hitmonlee
+Not: Scale = Hitmonchan 
+
