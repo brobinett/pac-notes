@@ -16,12 +16,3 @@ cp -r _pokemonAutoChess/app/public/src/assets/types{tps}/* assets/images/types/
 cp -r _pokemonAutoChess/app/public/src/assets/item{tps}/* assets/images/items/
 
 echo "Assets copied successfully!"
-```
-
-### Step 3: Update workflows and add to .gitignore
-
-Add to `.gitignore`:
-```
-assets/images/portraits/
-assets/images/types/
-assets/images/items/
