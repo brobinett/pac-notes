@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# Exit on error
 set -e
 
 echo "Copying PAC assets..."
 
-# Create directories
-mkdir -p assets/images/portraits
-mkdir -p assets/images/types
-mkdir -p assets/images/items
+# Run the Node.js script to process data and copy selective portraits
+node scripts/process-pac-data.js
 
-# Copy assets from submodule
-cp -r _pokemonAutoChess/app/public/src/assets/portraits/* assets/images/portraits/
+# Copy all type icons
+mkdir -p assets/images/types
 cp -r _pokemonAutoChess/app/public/src/assets/types{tps}/* assets/images/types/
+
+# Copy all item icons
+mkdir -p assets/images/items
 cp -r _pokemonAutoChess/app/public/src/assets/item{tps}/* assets/images/items/
 
 echo "Assets copied successfully!"
