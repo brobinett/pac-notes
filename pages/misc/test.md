@@ -9,6 +9,6 @@ nav_order: 100
 
 Here's Charizard:
 
-![Charizard](/assets/images/portraits/0006/Normal.png)
-![Fire Type](/assets/images/types/FIRE.png)
-![Rare Candy](/assets/images/items/RARE_CANDY.png)
+![Charizard]({{ site.baseurl }}/assets/images/portraits/0006/Normal.png)
+![Fire Type]({{ site.baseurl }}/assets/images/types/FIRE.png)
+![Rare Candy]({{ site.baseurl }}/assets/images/items/RARE_CANDY.png)
