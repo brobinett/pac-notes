@@ -1,9 +1,27 @@
 ---
-title: Amorphous
+title: Overview
 layout: home
-parent: Comps
-nav_order: 30
+parent: Amorphous
+nav_order: 10
 ---
+
+TODO
+
+Main ways to get into amorph:
+
+
+who to itemize, when to level, when to roll, what to look out for
+
+counters
+
+signals/how to get into the comp
+
+Early:
+
+Mid
+
+Late
+
 
 # Amorphous Synergy Guide
 
