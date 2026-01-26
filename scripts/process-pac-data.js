@@ -31,26 +31,40 @@ function extractPkmIndex() {
   return pokemonMap;
 }
 
-// Copy specific pokemon portraits
-function copyPortrait(name, index) {
-  const sourcePath = path.join(
-    '_pokemonAutoChess/app/public/src/assets/portraits',
-    index,
-    'Normal.png'
-  );
-  
+// Copy all pokemon portraits
+function copyAllPortraits(pkmIndex) {
   const destDir = 'assets/images/portraits';
-  const destPath = path.join(destDir, `${name}.png`);
   
   if (!fs.existsSync(destDir)) {
     fs.mkdirSync(destDir, { recursive: true });
   }
   
-  if (fs.existsSync(sourcePath)) {
-    fs.copyFileSync(sourcePath, destPath);
-    return true;
+  let copied = 0;
+  let skipped = 0;
+  const missing = [];
+  
+  for (const [name, index] of Object.entries(pkmIndex)) {
+    // Convert index format: "0019-0001" becomes "0019/0001"
+    const pathIndex = index.replace('-', '/');
+    
+    const sourcePath = path.join(
+      '_pokemonAutoChess/app/public/src/assets/portraits',
+      pathIndex,
+      'Normal.png'
+    );
+    
+    const destPath = path.join(destDir, `${name}.png`);
+    
+    if (fs.existsSync(sourcePath)) {
+      fs.copyFileSync(sourcePath, destPath);
+      copied++;
+    } else {
+      skipped++;
+      missing.push({ name, index, path: sourcePath });
+    }
   }
-  return false;
+  
+  return { copied, skipped, missing };
 }
 
 // Main function
@@ -70,25 +84,27 @@ function main() {
     JSON.stringify(pkmIndex, null, 2)
   );
   
-  console.log(`Generated _data/pokemon.json with ${Object.keys(pkmIndex).length} pokemon`);
+  console.log(`✓ Generated _data/pokemon.json with ${Object.keys(pkmIndex).length} pokemon`);
   
-  // Copy portraits for pokemon we want
-  // For now, let's copy a subset - you can expand this list
-  const pokemonToCopy = [
-    'CHARIZARD', 'BULBASAUR', 'SQUIRTLE', 'PIKACHU', 
-    'MEWTWO', 'GYARADOS', 'DRAGONITE'
-  ];
+  // Copy all portraits
+  const { copied, skipped, missing } = copyAllPortraits(pkmIndex);
+  console.log(`✓ Copied ${copied} pokemon portraits (${skipped} not found)`);
   
-  let copied = 0;
-  for (const name of pokemonToCopy) {
-    if (pkmIndex[name]) {
-      if (copyPortrait(name, pkmIndex[name])) {
-        copied++;
-      }
-    }
+  if (missing.length > 0 && missing.length <= 20) {
+    console.log('\nMissing portraits:');
+    missing.forEach(m => console.log(`  - ${m.name} (${m.index})`));
+  } else if (missing.length > 20) {
+    console.log(`\nFirst 20 missing portraits:`);
+    missing.slice(0, 20).forEach(m => console.log(`  - ${m.name} (${m.index})`));
+    console.log(`  ... and ${missing.length - 20} more`);
+    
+    // Write full list to file
+    fs.writeFileSync(
+      'missing-portraits.txt',
+      missing.map(m => `${m.name} (${m.index}): ${m.path}`).join('\n')
+    );
+    console.log('\nFull list written to missing-portraits.txt');
   }
-  
-  console.log(`Copied ${copied} pokemon portraits`);
 }
 
 main();

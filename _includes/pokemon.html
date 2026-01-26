@@ -1,0 +1,12 @@
+{% assign pokemon_name = include.name | upcase %}
+{% assign pokemon_index = site.data.pokemon[pokemon_name] %}
+{% if pokemon_index %}
+{% assign size_num = include.size | plus: 0 %}
+<img src="{{ site.baseurl }}/assets/images/portraits/{{ pokemon_name }}.png" 
+     alt="{{ pokemon_name }}" 
+     title="{{ pokemon_name }}"
+     class="pokemon-portrait"
+     {% if size_num > 1 %}style="width: {{ include.size }}px; height: {{ include.size }}px;"{% endif %}>
+{% else %}
+<span class="pokemon-not-found" title="Pokemon '{{ include.name }}' not found">❌ {{ include.name }}</span>
+{% endif %}

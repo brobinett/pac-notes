@@ -1,0 +1,11 @@
+.pokemon-portrait {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+}
+
+.pokemon-not-found {
+  color: red;
+  font-weight: bold;
+}
