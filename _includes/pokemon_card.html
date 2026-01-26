@@ -1,0 +1,120 @@
+{%- assign pokemon_name = include.name | upcase -%}
+{%- assign pokemon = site.data.pokemon[pokemon_name] -%}
+{%- if pokemon -%}
+<div class="pokemon-card">
+  <div class="pokemon-card-header">
+    <img src="{{ site.baseurl }}/assets/images/portraits/{{ pokemon_name }}.png" 
+         alt="{{ pokemon_name }}" 
+         class="pokemon-card-portrait">
+    <div class="pokemon-card-title-section">
+      <div class="pokemon-card-title-row">
+        <div>
+          <h3>{{ pokemon.Name }}</h3>
+          <div class="pokemon-card-tier">
+            {%- assign tier = pokemon.Tier | plus: 0 -%}
+            {%- assign max_tier = pokemon["Nb stages"] | plus: 0 -%}
+            {%- for i in (1..max_tier) -%}
+              {%- if i <= tier -%}
+                <span class="star filled">★</span>
+              {%- else -%}
+                <span class="star empty">☆</span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class="pokemon-card-types">
+          {%- if pokemon["Type 1"] != "" -%}
+            <img src="{{ site.baseurl }}/assets/images/types/{{ pokemon['Type 1'] }}.png" class="type-icon" alt="{{ pokemon['Type 1'] }}" title="{{ pokemon['Type 1'] }}">
+          {%- endif -%}
+          {%- if pokemon["Type 2"] != "" -%}
+            <img src="{{ site.baseurl }}/assets/images/types/{{ pokemon['Type 2'] }}.png" class="type-icon" alt="{{ pokemon['Type 2'] }}" title="{{ pokemon['Type 2'] }}">
+          {%- endif -%}
+          {%- if pokemon["Type 3"] != "" -%}
+            <img src="{{ site.baseurl }}/assets/images/types/{{ pokemon['Type 3'] }}.png" class="type-icon" alt="{{ pokemon['Type 3'] }}" title="{{ pokemon['Type 3'] }}">
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="pokemon-card-meta">
+        <span class="pokemon-rarity rarity-{{ pokemon.Category | downcase }}">{{ pokemon.Category }}</span>
+        {%- if pokemon["Additional pick"] == "true" -%}
+          <span class="pokemon-badge badge-additional">Add Pick</span>
+        {%- endif -%}
+        {%- if pokemon.Regional == "true" -%}
+          <span class="pokemon-badge badge-regional">Regional</span>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  
+  <div class="pokemon-card-info">
+    <span><strong>Range:</strong> {{ pokemon["Attack Range"] }}</span>
+    <span><strong>Ability:</strong> {{ pokemon.Ability }}</span>
+  </div>
+  
+  <div class="pokemon-card-stats">
+    {%- assign hp = pokemon.HP | plus: 0 -%}
+    {%- assign attack = pokemon.Attack | plus: 0 -%}
+    {%- assign defense = pokemon.Defense | plus: 0 -%}
+    {%- assign spedef = pokemon["Special Defense"] | plus: 0 -%}
+    {%- assign speed = pokemon.Speed | plus: 0 -%}
+    {%- assign pp = pokemon["Max PP"] | plus: 0 -%}
+    
+    {%- assign hp_max = site.data.stat_ranges.HP.p95 -%}
+    {%- assign atk_max = site.data.stat_ranges.Attack.p95 -%}
+    {%- assign def_max = site.data.stat_ranges.Defense.p95 -%}
+    {%- assign spd_max = site.data.stat_ranges.Speed.p95 -%}
+    {%- assign spedef_max = site.data.stat_ranges["Special Defense"].p95 -%}
+    {%- assign pp_max = site.data.stat_ranges["Max PP"].p95 -%}
+    
+    <div class="stat-row">
+      <span class="stat-label">HP</span>
+      <div class="stat-bar-container">
+        <div class="stat-bar" style="width: {{ hp | times: 100 | divided_by: hp_max }}%"></div>
+      </div>
+      <span class="stat-value">{{ hp }}</span>
+    </div>
+    
+    <div class="stat-row">
+      <span class="stat-label">ATK</span>
+      <div class="stat-bar-container">
+        <div class="stat-bar stat-bar-attack" style="width: {{ attack | times: 100 | divided_by: atk_max }}%"></div>
+      </div>
+      <span class="stat-value">{{ attack }}</span>
+    </div>
+    
+    <div class="stat-row">
+      <span class="stat-label">DEF</span>
+      <div class="stat-bar-container">
+        <div class="stat-bar stat-bar-defense" style="width: {{ defense | times: 100 | divided_by: def_max }}%"></div>
+      </div>
+      <span class="stat-value">{{ defense }}</span>
+    </div>
+    
+    <div class="stat-row">
+      <span class="stat-label">SPD</span>
+      <div class="stat-bar-container">
+        <div class="stat-bar stat-bar-speed" style="width: {{ speed | times: 100 | divided_by: spd_max }}%"></div>
+      </div>
+      <span class="stat-value">{{ speed }}</span>
+    </div>
+    
+    <div class="stat-row">
+      <span class="stat-label">SP.D</span>
+      <div class="stat-bar-container">
+        <div class="stat-bar stat-bar-spedef" style="width: {{ spedef | times: 100 | divided_by: spedef_max }}%"></div>
+      </div>
+      <span class="stat-value">{{ spedef }}</span>
+    </div>
+    
+    <div class="stat-row">
+      <span class="stat-label">PP</span>
+      <div class="stat-bar-container">
+        <div class="stat-bar stat-bar-pp" style="width: {{ pp | times: 100 | divided_by: pp_max }}%"></div>
+      </div>
+      <span class="stat-value">{{ pp }}</span>
+    </div>
+  </div>
+</div>
+{%- else -%}
+<div class="pokemon-not-found">Pokemon "{{ include.name }}" not found</div>
+{%- endif -%}

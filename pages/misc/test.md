@@ -39,3 +39,20 @@ Debug test:
 
 Direct include test:
 {% include pokemon.html name="charizard" %}
+
+
+# Pokemon Display Tests
+
+## Simple Portrait
+{% include pokemon.html name="charizard" %}
+{% include pokemon.html name="pikachu" size="64" %}
+
+## Pokemon Card
+{% include pokemon_card.html name="charizard" %}
+{% include pokemon_card.html name="pikachu" %}
+{% include pokemon_card.html name="mewtwo" %}
+{% include pokemon_card.html name="slowpoke" %}
+{% include pokemon_card.html name="galarian_slowpoke" %}
+{% include pokemon_card.html name="blissey" %}
+{% include pokemon_card.html name="melmetal" %}
+{% include pokemon_card.html name="froakie" %}
