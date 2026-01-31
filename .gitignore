@@ -19,4 +19,5 @@ assets/images/portraits/
 assets/images/types/
 assets/images/items/
 _data/pokemon.json
+_data/pokemon_by_type.json
 _data/stat_ranges.json

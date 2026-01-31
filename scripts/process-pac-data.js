@@ -131,6 +131,36 @@ function copyAllPortraits(pkmIndex) {
   return { copied, skipped };
 }
 
+// Generate type-filtered pokemon lists
+function generateTypeFilters(pokemonData) {
+  const typeFilters = {};
+  
+  // Get all unique types
+  const allTypes = new Set();
+  Object.values(pokemonData).forEach(p => {
+    ['Type 1', 'Type 2', 'Type 3', 'Type 4'].forEach(typeField => {
+      if (p[typeField] && p[typeField] !== '') {
+        allTypes.add(p[typeField]);
+      }
+    });
+  });
+  
+  // For each type, create a list of pokemon names
+  allTypes.forEach(type => {
+    typeFilters[type] = [];
+    Object.entries(pokemonData).forEach(([name, data]) => {
+      const hasType = ['Type 1', 'Type 2', 'Type 3', 'Type 4'].some(
+        field => data[field] === type
+      );
+      if (hasType) {
+        typeFilters[type].push(name);
+      }
+    });
+  });
+  
+  return typeFilters;
+}
+
 // Main function
 async function main() {
   console.log('Processing PAC data...');
@@ -171,6 +201,14 @@ async function main() {
     path.join(dataDir, 'pokemon.json'),
     JSON.stringify(pkmIndex, null, 2)
   );
+
+  // Generate type filters
+  const typeFilters = generateTypeFilters(pkmIndex);
+  fs.writeFileSync(
+    path.join(dataDir, 'pokemon_by_type.json'),
+    JSON.stringify(typeFilters, null, 2)
+  );
+  console.log(`✓ Generated _data/pokemon_by_type.json`);
   
   // Save stat ranges for use in templates
   fs.writeFileSync(

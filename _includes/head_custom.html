@@ -1,9 +1,10 @@
 <script>
 (function() {
-  var savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark' && typeof jtd !== 'undefined') {
-    jtd.setTheme('dark');
+  var savedTheme = localStorage.getItem('theme') || 'default';
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
 })();
 </script>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/pokemon.css">
+<link rel="stylesheet" href="{{ '/assets/css/pokemon.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/pokemon-table.css' | relative_url }}">

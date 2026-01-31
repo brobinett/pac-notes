@@ -1,0 +1,146 @@
+/* Pokemon Table */
+.pokemon-table-container {
+  margin: 20px 0;
+}
+
+.pokemon-table-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #666;
+  min-width: 60px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 4px 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.85em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 32px;
+}
+
+.filter-btn:hover {
+  background: #f0f0f0;
+}
+
+.filter-btn.active {
+  background: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+.filter-btn[data-value="COMMON"].active { background: #808080; border-color: #808080; }
+.filter-btn[data-value="UNCOMMON"].active { background: #4CAF50; border-color: #4CAF50; }
+.filter-btn[data-value="RARE"].active { background: #2196F3; border-color: #2196F3; }
+.filter-btn[data-value="EPIC"].active { background: #9C27B0; border-color: #9C27B0; }
+.filter-btn[data-value="ULTRA"].active { background: #FF9800; border-color: #FF9800; }
+.filter-btn[data-value="UNIQUE"].active { background: #F44336; border-color: #F44336; }
+.filter-btn[data-value="LEGENDARY"].active { background: #FFD700; border-color: #FFD700; color: #333; }
+.filter-btn[data-value="HATCH"].active { background: #E91E63; border-color: #E91E63; }
+.filter-btn[data-value="SPECIAL"].active { background: #607D8B; border-color: #607D8B; }
+
+.pokemon-table-wrapper {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.pokemon-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  table-layout: auto;
+}
+
+/* Override Jekyll theme's min-width on table cells */
+.pokemon-table th,
+.pokemon-table td {
+  min-width: unset !important;
+}
+
+.pokemon-table th {
+  background: #f5f5f5;
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  white-space: nowrap;
+}
+
+.pokemon-table th[data-sort] {
+  user-select: none;
+  cursor: pointer;
+}
+
+.pokemon-table th[data-sort]:hover {
+  background: #e8e8e8;
+}
+
+.pokemon-table th.sort-asc::after {
+  content: ' ▲';
+  font-size: 0.8em;
+}
+
+.pokemon-table th.sort-desc::after {
+  content: ' ▼';
+  font-size: 0.8em;
+}
+
+.pokemon-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.pokemon-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.pokemon-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.table-portrait {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.rarity-badge {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

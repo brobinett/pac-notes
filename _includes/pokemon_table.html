@@ -1,0 +1,102 @@
+{%- assign pokemon_list = include.pokemon -%}
+{%- assign table_id = include.id | default: "pokemon-table" -%}
+
+<div class="pokemon-table-wrapper">
+  <table class="pokemon-table" id="{{ table_id }}" data-sortable>
+    <thead>
+      <tr>
+        <th data-sort="name">Name</th>
+        <th data-sort="rarity">Rarity</th>
+        <th data-sort="tier">Tier</th>
+        <th data-sort="hp">HP</th>
+        <th data-sort="atk">ATK</th>
+        <th data-sort="def">DEF</th>
+        <th data-sort="spd">SPD</th>
+        <th data-sort="spedef">SP.D</th>
+        <th data-sort="pp">PP</th>
+        <th data-sort="range">RNG</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for pokemon_name in pokemon_list -%}
+        {%- assign p = site.data.pokemon[pokemon_name] -%}
+        {%- if p -%}
+        <tr>
+          <td class="pokemon-name-cell">
+            <img src="{{ site.baseurl }}/assets/images/portraits/{{ pokemon_name }}.png" class="table-portrait" alt="{{ pokemon_name }}">
+            {{ p.Name }}
+          </td>
+          <td data-value="{{ p.Category }}">
+            <span class="rarity-badge rarity-{{ p.Category | downcase }}">{{ p.Category }}</span>
+          </td>
+          <td data-value="{{ p.Tier }}">{{ p.Tier }}</td>
+          <td data-value="{{ p.HP }}">{{ p.HP }}</td>
+          <td data-value="{{ p.Attack }}">{{ p.Attack }}</td>
+          <td data-value="{{ p.Defense }}">{{ p.Defense }}</td>
+          <td data-value="{{ p.Speed }}">{{ p.Speed }}</td>
+          <td data-value="{{ p['Special Defense'] }}">{{ p['Special Defense'] }}</td>
+          <td data-value="{{ p['Max PP'] }}">{{ p['Max PP'] }}</td>
+          <td data-value="{{ p['Attack Range'] }}">{{ p['Attack Range'] }}</td>
+        </tr>
+        {%- endif -%}
+      {%- endfor -%}
+    </tbody>
+  </table>
+</div>
+
+<script>
+(function() {
+  const table = document.getElementById('{{ table_id }}');
+  if (!table) return;
+  
+  const headers = table.querySelectorAll('th[data-sort]');
+  let currentSort = { column: null, ascending: true };
+  
+  headers.forEach(header => {
+    header.style.cursor = 'pointer';
+    header.addEventListener('click', () => {
+      const column = header.dataset.sort;
+      const ascending = currentSort.column === column ? !currentSort.ascending : true;
+      currentSort = { column, ascending };
+      
+      sortTable(table, column, ascending);
+      updateHeaders(headers, column, ascending);
+    });
+  });
+  
+  function sortTable(table, column, ascending) {
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    rows.sort((a, b) => {
+      let aVal, bVal;
+      
+      if (column === 'name') {
+        aVal = a.querySelector('.pokemon-name-cell').textContent.trim();
+        bVal = b.querySelector('.pokemon-name-cell').textContent.trim();
+      } else {
+        const colIndex = Array.from(table.querySelectorAll('th')).findIndex(
+          th => th.dataset.sort === column
+        );
+        aVal = parseFloat(a.querySelectorAll('td')[colIndex].dataset.value) || 0;
+        bVal = parseFloat(b.querySelectorAll('td')[colIndex].dataset.value) || 0;
+      }
+      
+      if (aVal < bVal) return ascending ? -1 : 1;
+      if (aVal > bVal) return ascending ? 1 : -1;
+      return 0;
+    });
+    
+    rows.forEach(row => tbody.appendChild(row));
+  }
+  
+  function updateHeaders(headers, activeColumn, ascending) {
+    headers.forEach(header => {
+      header.classList.remove('sort-asc', 'sort-desc');
+      if (header.dataset.sort === activeColumn) {
+        header.classList.add(ascending ? 'sort-asc' : 'sort-desc');
+      }
+    });
+  }
+})();
+</script>

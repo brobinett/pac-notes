@@ -56,3 +56,9 @@ Direct include test:
 {% include pokemon_card.html name="blissey" %}
 {% include pokemon_card.html name="melmetal" %}
 {% include pokemon_card.html name="froakie" %}
+
+
+# Fire Type Pokemon
+
+{% assign fire_pokemon = site.data.pokemon_by_type.FIRE %}
+{% include pokemon_table.html pokemon=fire_pokemon id="fire-table" %}
