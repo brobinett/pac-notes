@@ -69,7 +69,21 @@
     <div class="stat-row">
       <span class="stat-label">HP</span>
       <div class="stat-bar-container">
-        <div class="stat-bar" style="width: {{ hp | times: 100 | divided_by: hp_max }}%"></div>
+        {%- if hp > hp_max -%}
+          <div class="stat-bar" style="width: 100%"></div>
+          {%- assign excess = hp | minus: hp_max -%}
+          {%- assign layer1 = excess -%}
+          {%- if layer1 > hp_max -%}{%- assign layer1 = hp_max -%}{%- endif -%}
+          <div class="stat-bar stat-bar-overshield stat-bar-overshield-1" style="width: {{ layer1 | times: 100 | divided_by: hp_max }}%"></div>
+          {%- assign remaining = excess | minus: hp_max -%}
+          {%- if remaining > 0 -%}
+            {%- assign layer2 = remaining -%}
+            {%- if layer2 > hp_max -%}{%- assign layer2 = hp_max -%}{%- endif -%}
+            <div class="stat-bar stat-bar-overshield stat-bar-overshield-2" style="width: {{ layer2 | times: 100 | divided_by: hp_max }}%"></div>
+          {%- endif -%}
+        {%- else -%}
+          <div class="stat-bar" style="width: {{ hp | times: 100 | divided_by: hp_max }}%"></div>
+        {%- endif -%}
       </div>
       <span class="stat-value">{{ hp }}</span>
     </div>
@@ -77,7 +91,21 @@
     <div class="stat-row">
       <span class="stat-label">ATK</span>
       <div class="stat-bar-container">
-        <div class="stat-bar stat-bar-attack" style="width: {{ attack | times: 100 | divided_by: atk_max }}%"></div>
+        {%- if attack > atk_max -%}
+          <div class="stat-bar stat-bar-attack" style="width: 100%"></div>
+          {%- assign excess = attack | minus: atk_max -%}
+          {%- assign layer1 = excess -%}
+          {%- if layer1 > atk_max -%}{%- assign layer1 = atk_max -%}{%- endif -%}
+          <div class="stat-bar stat-bar-attack stat-bar-overshield stat-bar-overshield-1" style="width: {{ layer1 | times: 100 | divided_by: atk_max }}%"></div>
+          {%- assign remaining = excess | minus: atk_max -%}
+          {%- if remaining > 0 -%}
+            {%- assign layer2 = remaining -%}
+            {%- if layer2 > atk_max -%}{%- assign layer2 = atk_max -%}{%- endif -%}
+            <div class="stat-bar stat-bar-attack stat-bar-overshield stat-bar-overshield-2" style="width: {{ layer2 | times: 100 | divided_by: atk_max }}%"></div>
+          {%- endif -%}
+        {%- else -%}
+          <div class="stat-bar stat-bar-attack" style="width: {{ attack | times: 100 | divided_by: atk_max }}%"></div>
+        {%- endif -%}
       </div>
       <span class="stat-value">{{ attack }}</span>
     </div>
@@ -85,7 +113,21 @@
     <div class="stat-row">
       <span class="stat-label">DEF</span>
       <div class="stat-bar-container">
-        <div class="stat-bar stat-bar-defense" style="width: {{ defense | times: 100 | divided_by: def_max }}%"></div>
+        {%- if defense > def_max -%}
+          <div class="stat-bar stat-bar-defense" style="width: 100%"></div>
+          {%- assign excess = defense | minus: def_max -%}
+          {%- assign layer1 = excess -%}
+          {%- if layer1 > def_max -%}{%- assign layer1 = def_max -%}{%- endif -%}
+          <div class="stat-bar stat-bar-defense stat-bar-overshield stat-bar-overshield-1" style="width: {{ layer1 | times: 100 | divided_by: def_max }}%"></div>
+          {%- assign remaining = excess | minus: def_max -%}
+          {%- if remaining > 0 -%}
+            {%- assign layer2 = remaining -%}
+            {%- if layer2 > def_max -%}{%- assign layer2 = def_max -%}{%- endif -%}
+            <div class="stat-bar stat-bar-defense stat-bar-overshield stat-bar-overshield-2" style="width: {{ layer2 | times: 100 | divided_by: def_max }}%"></div>
+          {%- endif -%}
+        {%- else -%}
+          <div class="stat-bar stat-bar-defense" style="width: {{ defense | times: 100 | divided_by: def_max }}%"></div>
+        {%- endif -%}
       </div>
       <span class="stat-value">{{ defense }}</span>
     </div>
@@ -93,7 +135,21 @@
     <div class="stat-row">
       <span class="stat-label">SPD</span>
       <div class="stat-bar-container">
-        <div class="stat-bar stat-bar-speed" style="width: {{ speed | times: 100 | divided_by: spd_max }}%"></div>
+        {%- if speed > spd_max -%}
+          <div class="stat-bar stat-bar-speed" style="width: 100%"></div>
+          {%- assign excess = speed | minus: spd_max -%}
+          {%- assign layer1 = excess -%}
+          {%- if layer1 > spd_max -%}{%- assign layer1 = spd_max -%}{%- endif -%}
+          <div class="stat-bar stat-bar-speed stat-bar-overshield stat-bar-overshield-1" style="width: {{ layer1 | times: 100 | divided_by: spd_max }}%"></div>
+          {%- assign remaining = excess | minus: spd_max -%}
+          {%- if remaining > 0 -%}
+            {%- assign layer2 = remaining -%}
+            {%- if layer2 > spd_max -%}{%- assign layer2 = spd_max -%}{%- endif -%}
+            <div class="stat-bar stat-bar-speed stat-bar-overshield stat-bar-overshield-2" style="width: {{ layer2 | times: 100 | divided_by: spd_max }}%"></div>
+          {%- endif -%}
+        {%- else -%}
+          <div class="stat-bar stat-bar-speed" style="width: {{ speed | times: 100 | divided_by: spd_max }}%"></div>
+        {%- endif -%}
       </div>
       <span class="stat-value">{{ speed }}</span>
     </div>
@@ -101,7 +157,21 @@
     <div class="stat-row">
       <span class="stat-label">SP.D</span>
       <div class="stat-bar-container">
-        <div class="stat-bar stat-bar-spedef" style="width: {{ spedef | times: 100 | divided_by: spedef_max }}%"></div>
+        {%- if spedef > spedef_max -%}
+          <div class="stat-bar stat-bar-spedef" style="width: 100%"></div>
+          {%- assign excess = spedef | minus: spedef_max -%}
+          {%- assign layer1 = excess -%}
+          {%- if layer1 > spedef_max -%}{%- assign layer1 = spedef_max -%}{%- endif -%}
+          <div class="stat-bar stat-bar-spedef stat-bar-overshield stat-bar-overshield-1" style="width: {{ layer1 | times: 100 | divided_by: spedef_max }}%"></div>
+          {%- assign remaining = excess | minus: spedef_max -%}
+          {%- if remaining > 0 -%}
+            {%- assign layer2 = remaining -%}
+            {%- if layer2 > spedef_max -%}{%- assign layer2 = spedef_max -%}{%- endif -%}
+            <div class="stat-bar stat-bar-spedef stat-bar-overshield stat-bar-overshield-2" style="width: {{ layer2 | times: 100 | divided_by: spedef_max }}%"></div>
+          {%- endif -%}
+        {%- else -%}
+          <div class="stat-bar stat-bar-spedef" style="width: {{ spedef | times: 100 | divided_by: spedef_max }}%"></div>
+        {%- endif -%}
       </div>
       <span class="stat-value">{{ spedef }}</span>
     </div>
@@ -109,7 +179,21 @@
     <div class="stat-row">
       <span class="stat-label">PP</span>
       <div class="stat-bar-container">
-        <div class="stat-bar stat-bar-pp" style="width: {{ pp | times: 100 | divided_by: pp_max }}%"></div>
+        {%- if pp > pp_max -%}
+          <div class="stat-bar stat-bar-pp" style="width: 100%"></div>
+          {%- assign excess = pp | minus: pp_max -%}
+          {%- assign layer1 = excess -%}
+          {%- if layer1 > pp_max -%}{%- assign layer1 = pp_max -%}{%- endif -%}
+          <div class="stat-bar stat-bar-pp stat-bar-overshield stat-bar-overshield-1" style="width: {{ layer1 | times: 100 | divided_by: pp_max }}%"></div>
+          {%- assign remaining = excess | minus: pp_max -%}
+          {%- if remaining > 0 -%}
+            {%- assign layer2 = remaining -%}
+            {%- if layer2 > pp_max -%}{%- assign layer2 = pp_max -%}{%- endif -%}
+            <div class="stat-bar stat-bar-pp stat-bar-overshield stat-bar-overshield-2" style="width: {{ layer2 | times: 100 | divided_by: pp_max }}%"></div>
+          {%- endif -%}
+        {%- else -%}
+          <div class="stat-bar stat-bar-pp" style="width: {{ pp | times: 100 | divided_by: pp_max }}%"></div>
+        {%- endif -%}
       </div>
       <span class="stat-value">{{ pp }}</span>
     </div>
