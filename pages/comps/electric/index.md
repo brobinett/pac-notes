@@ -1,8 +1,8 @@
 ---
-title: Dragon
+title: Electric
 layout: home
 parent: Comps
-nav_order: 70
+nav_order: 80
 ---
 
-dragon
+TODO

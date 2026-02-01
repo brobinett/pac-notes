@@ -1,8 +1,8 @@
 ---
-title: Dragon
+title: Psychic
 layout: home
 parent: Comps
-nav_order: 70
+nav_order: 260
 ---
 
-dragon
+TODO

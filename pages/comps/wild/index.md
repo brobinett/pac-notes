@@ -2,7 +2,7 @@
 title: Wild
 layout: home
 parent: Comps
-nav_order: 28
+nav_order: 310
 ---
 
 wild

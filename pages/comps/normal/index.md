@@ -1,8 +1,8 @@
 ---
-title: Dragon
+title: Normal
 layout: home
 parent: Comps
-nav_order: 70
+nav_order: 240
 ---
 
-dragon
+TODO

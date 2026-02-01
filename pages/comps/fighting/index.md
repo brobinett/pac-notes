@@ -1,8 +1,8 @@
 ---
-title: Dragon
+title: Fighting
 layout: home
 parent: Comps
-nav_order: 70
+nav_order: 110
 ---
 
-dragon
+TODO
