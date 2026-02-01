@@ -14,9 +14,14 @@ _site/
 .bundle/
 vendor/
 
-# PAC assets
+# PAC assets and generated data
 assets/images/portraits/
 assets/images/types/
 assets/images/items/
+
+# Generated Pokemon data
 _data/pokemon.json
 _data/stat_ranges.json
+
+# Generated config files
+_data/*_config.json
