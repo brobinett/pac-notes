@@ -106,6 +106,156 @@ function parseTownEncounters(configPath, pokemonData) {
 }
 
 /**
+ * Parse dishes configuration
+ */
+function parseDishes(dishesPath) {
+  const content = fs.readFileSync(dishesPath, 'utf-8');
+  const result = {
+    dishByPokemon: {},
+    dishEffects: {}
+  };
+  
+  // Extract DishByPkm mapping
+  const dishByPkmMatch = content.match(/export const DishByPkm[^=]*=\s*{([\s\S]*?)^}/m);
+  if (dishByPkmMatch) {
+    const dishContent = dishByPkmMatch[1];
+    const dishRegex = /\[Pkm\.(\w+)\]:\s*Item\.(\w+)/g;
+    let match;
+    
+    while ((match = dishRegex.exec(dishContent)) !== null) {
+      result.dishByPokemon[match[1]] = match[2];
+    }
+  }
+  
+  // Extract DishEffects - just document which dishes have effects
+  const dishEffectsMatch = content.match(/export const DishEffects[^=]*=\s*{([\s\S]*?)^}/m);
+  if (dishEffectsMatch) {
+    const effectsContent = dishEffectsMatch[1];
+    // Match dish names followed by effect arrays
+    const effectRegex = /(\w+):\s*\[([^\]]*(?:\[[^\]]*\][^\]]*)*)\]/g;
+    let match;
+    
+    while ((match = effectRegex.exec(effectsContent)) !== null) {
+      const dish = match[1];
+      const effectsStr = match[2].trim();
+      
+      // Check if it has effects or is empty array
+      if (effectsStr) {
+        // Count the effect types
+        const onSpawnCount = (effectsStr.match(/new OnSpawnEffect/g) || []).length;
+        const onHitCount = (effectsStr.match(/new OnHitEffect/g) || []).length;
+        const onConsumedCount = (effectsStr.match(/new OnDishConsumedEffect/g) || []).length;
+        const periodicCount = (effectsStr.match(/new PeriodicEffect/g) || []).length;
+        
+        result.dishEffects[dish] = {
+          hasEffects: true,
+          effectTypes: {
+            onSpawn: onSpawnCount,
+            onHit: onHitCount,
+            onConsumed: onConsumedCount,
+            periodic: periodicCount
+          }
+        };
+      } else {
+        result.dishEffects[dish] = {
+          hasEffects: false
+        };
+      }
+    }
+  }
+  
+  return result;
+}
+
+/**
+ * Parse flower pots configuration
+ */
+function parseFlowerPots(flowerPotsPath) {
+  const content = fs.readFileSync(flowerPotsPath, 'utf-8');
+  const result = {
+    positions: {},
+    flowerPots: [],
+    flowerMonByPot: {},
+    mulchStockCaps: []
+  };
+  
+  // Extract position arrays - need to handle nested arrays
+  const bluePositionsMatch = content.match(/export const FLOWER_POTS_POSITIONS_BLUE\s*=\s*\[(\s*\[\s*\d+\s*,\s*\d+\s*\](?:\s*,\s*\[\s*\d+\s*,\s*\d+\s*\])*\s*)\]/);
+  if (bluePositionsMatch) {
+    const positions = [];
+    const posRegex = /\[\s*(\d+)\s*,\s*(\d+)\s*\]/g;
+    let match;
+    
+    while ((match = posRegex.exec(bluePositionsMatch[1])) !== null) {
+      positions.push([parseInt(match[1]), parseInt(match[2])]);
+    }
+    result.positions.blue = positions;
+  }
+  
+  const redPositionsMatch = content.match(/export const FLOWER_POTS_POSITIONS_RED\s*=\s*\[(\s*\[\s*\d+\s*,\s*\d+\s*\](?:\s*,\s*\[\s*\d+\s*,\s*\d+\s*\])*\s*)\]/);
+  if (redPositionsMatch) {
+    const positions = [];
+    const posRegex = /\[\s*(\d+)\s*,\s*(\d+)\s*\]/g;
+    let match;
+    
+    while ((match = posRegex.exec(redPositionsMatch[1])) !== null) {
+      positions.push([parseInt(match[1]), parseInt(match[2])]);
+    }
+    result.positions.red = positions;
+  }
+  
+  // Extract FlowerPots enum values
+  const flowersMatch = content.match(/export const FlowerPots\s*=\s*\[([\s\S]*?)\]/);
+  if (flowersMatch) {
+    const pots = [];
+    const potRegex = /FlowerPot\.(\w+)/g;
+    let match;
+    
+    while ((match = potRegex.exec(flowersMatch[1])) !== null) {
+      pots.push(match[1]);
+    }
+    result.flowerPots = pots;
+  }
+  
+  // Extract FlowerMonByPot mapping
+  const flowerMonMatch = content.match(/export const FlowerMonByPot[^=]*=\s*{([\s\S]*?)^}/m);
+  if (flowerMonMatch) {
+    const monContent = flowerMonMatch[1];
+    const potRegex = /\[FlowerPot\.(\w+)\]:\s*\[([^\]]+)\]/g;
+    let match;
+    
+    while ((match = potRegex.exec(monContent)) !== null) {
+      const pot = match[1];
+      const monsStr = match[2];
+      const mons = [];
+      const monRegex = /Pkm\.(\w+)/g;
+      let monMatch;
+      
+      while ((monMatch = monRegex.exec(monsStr)) !== null) {
+        mons.push(monMatch[1]);
+      }
+      
+      result.flowerMonByPot[pot] = mons;
+    }
+  }
+  
+  // Extract MulchStockCaps
+  const mulchMatch = content.match(/export const MulchStockCaps\s*=\s*\[([\s\S]*?)\]/);
+  if (mulchMatch) {
+    const caps = mulchMatch[1]
+      .split(',')
+      .map(line => {
+        const num = line.trim().split(/\s+/)[0]; // Get number before comment
+        return parseInt(num);
+      })
+      .filter(n => !isNaN(n));
+    result.mulchStockCaps = caps;
+  }
+  
+  return result;
+}
+
+/**
  * Parse Item enum and categories
  */
 function parseItemEnum(enumPath) {
@@ -743,6 +893,20 @@ function parseSimpleConfig(configPath, configName) {
  */
 function processConfigs(pokemonData) {
   const configs = {};
+  
+  // Process dishes
+  const dishesPath = path.join(PAC_ROOT, 'app/core/dishes.ts');
+  if (fs.existsSync(dishesPath)) {
+    configs.dishes = parseDishes(dishesPath);
+    console.log('✓ Processed dishes');
+  }
+  
+  // Process flower pots
+  const flowerPotsPath = path.join(PAC_ROOT, 'app/core/flower-pots.ts');
+  if (fs.existsSync(flowerPotsPath)) {
+    configs.flowerPots = parseFlowerPots(flowerPotsPath);
+    console.log('✓ Processed flower pots');
+  }
   
   // Process Item enum
   const itemEnumPath = path.join(PAC_ROOT, 'app/types/enum/Item.ts');
