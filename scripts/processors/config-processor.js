@@ -106,6 +106,306 @@ function parseTownEncounters(configPath, pokemonData) {
 }
 
 /**
+ * Parse Item enum and categories
+ */
+function parseItemEnum(enumPath) {
+  const content = fs.readFileSync(enumPath, 'utf-8');
+  const result = {
+    itemCategories: {},
+    itemMappings: {}
+  };
+  
+  // Extract item array constants (e.g., ItemComponentsNoFossilOrScarf, Berries, etc.)
+  const arrayRegex = /export const (\w+)(?:\s*:\s*Item\[\])?\s*=\s*\[([\s\S]*?)\](?:\s+satisfies\s+Item\[\])?/g;
+  let arrayMatch;
+  
+  while ((arrayMatch = arrayRegex.exec(content)) !== null) {
+    const arrayName = arrayMatch[1];
+    const arrayContent = arrayMatch[2];
+    
+    // Skip if it's a type definition, not an array
+    if (arrayContent.includes('=>') || arrayContent.includes('function')) continue;
+    
+    const items = [];
+    const itemRegex = /Item\.(\w+)/g;
+    let itemMatch;
+    
+    while ((itemMatch = itemRegex.exec(arrayContent)) !== null) {
+      items.push(itemMatch[1]);
+    }
+    
+    // Also handle spread operators
+    const spreadRegex = /\.\.\.(\w+)/g;
+    let spreadMatch;
+    const spreads = [];
+    
+    while ((spreadMatch = spreadRegex.exec(arrayContent)) !== null) {
+      spreads.push(spreadMatch[1]);
+    }
+    
+    if (items.length > 0 || spreads.length > 0) {
+      result.itemCategories[arrayName] = {
+        items: items,
+        includes: spreads.length > 0 ? spreads : undefined
+      };
+    }
+  }
+  
+  // Extract ItemRecipe mapping
+  const recipeMatch = content.match(/export const ItemRecipe[^=]*=\s*{([\s\S]*?)^}/m);
+  if (recipeMatch) {
+    const recipeContent = recipeMatch[1];
+    const recipes = {};
+    const recipeRegex = /\[Item\.(\w+)\]:\s*\[([\s\S]*?)\]/g;
+    let match;
+    
+    while ((match = recipeRegex.exec(recipeContent)) !== null) {
+      const item = match[1];
+      const ingredientsStr = match[2];
+      const ingredients = [];
+      const ingredientRegex = /Item\.(\w+)/g;
+      let ingredientMatch;
+      
+      while ((ingredientMatch = ingredientRegex.exec(ingredientsStr)) !== null) {
+        ingredients.push(ingredientMatch[1]);
+      }
+      
+      recipes[item] = ingredients;
+    }
+    
+    result.itemMappings.ItemRecipe = recipes;
+  }
+  
+  // Extract SynergyGivenByItem mapping
+  const synergyItemMatch = content.match(/export const SynergyGivenByItem\s*=\s*{([\s\S]*?)^}/m);
+  if (synergyItemMatch) {
+    const synergyContent = synergyItemMatch[1];
+    const synergies = {};
+    const synergyRegex = /\[Item\.(\w+)\]:\s*Synergy\.(\w+)/g;
+    let match;
+    
+    while ((match = synergyRegex.exec(synergyContent)) !== null) {
+      synergies[match[1]] = match[2];
+    }
+    
+    result.itemMappings.SynergyGivenByItem = synergies;
+  }
+  
+  // Extract SynergyGivenByGem mapping
+  const synergyGemMatch = content.match(/export const SynergyGivenByGem[^=]*=\s*{([\s\S]*?)^}/m);
+  if (synergyGemMatch) {
+    const gemContent = synergyGemMatch[1];
+    const gems = {};
+    const gemRegex = /\[Item\.(\w+)\]:\s*Synergy\.(\w+)/g;
+    let match;
+    
+    while ((match = gemRegex.exec(gemContent)) !== null) {
+      gems[match[1]] = match[2];
+    }
+    
+    result.itemMappings.SynergyGivenByGem = gems;
+  }
+  
+  // Extract SynergyFlavors mapping
+  const synergyFlavorsMatch = content.match(/export const SynergyFlavors\s*=\s*{([\s\S]*?)^}/m);
+  if (synergyFlavorsMatch) {
+    const flavorsContent = synergyFlavorsMatch[1];
+    const flavors = {};
+    const flavorRegex = /\[Synergy\.(\w+)\]:\s*Item\.(\w+)/g;
+    let match;
+    
+    while ((match = flavorRegex.exec(flavorsContent)) !== null) {
+      flavors[match[1]] = match[2];
+    }
+    
+    result.itemMappings.SynergyFlavors = flavors;
+  }
+  
+  // Extract WeatherRocksByWeather mapping
+  const weatherRocksMatch = content.match(/export const WeatherRocksByWeather\s*=\s*new Map\(\[([\s\S]*?)\]\)/);
+  if (weatherRocksMatch) {
+    const weatherContent = weatherRocksMatch[1];
+    const weathers = {};
+    const weatherRegex = /\[Weather\.(\w+),\s*(?:Item\.(\w+)|null)\]/g;
+    let match;
+    
+    while ((match = weatherRegex.exec(weatherContent)) !== null) {
+      weathers[match[1]] = match[2] || null;
+    }
+    
+    result.itemMappings.WeatherRocksByWeather = weathers;
+  }
+  
+  // Extract AbilityPerTM mapping
+  const abilityTMMatch = content.match(/export const AbilityPerTM[^=]*=\s*{([\s\S]*?)^}/m);
+  if (abilityTMMatch) {
+    const tmContent = abilityTMMatch[1];
+    const abilities = {};
+    const abilityRegex = /\[Item\.(\w+)\]:\s*Ability\.(\w+)/g;
+    let match;
+    
+    while ((match = abilityRegex.exec(tmContent)) !== null) {
+      abilities[match[1]] = match[2];
+    }
+    
+    result.itemMappings.AbilityPerTM = abilities;
+  }
+  
+  // Extract MemoryDiscsBySynergy mapping
+  const memoryDiscsMatch = content.match(/export const MemoryDiscsBySynergy[^=]*=\s*{([\s\S]*?)^}/m);
+  if (memoryDiscsMatch) {
+    const memoryContent = memoryDiscsMatch[1];
+    const memories = {};
+    const memoryRegex = /\[Synergy\.(\w+)\]:\s*Item\.(\w+)/g;
+    let match;
+    
+    while ((match = memoryRegex.exec(memoryContent)) !== null) {
+      memories[match[1]] = match[2];
+    }
+    
+    result.itemMappings.MemoryDiscsBySynergy = memories;
+  }
+  
+  return result;
+}
+
+/**
+ * Parse PVE stages
+ */
+function parsePVEStages(configPath) {
+  const content = fs.readFileSync(configPath, 'utf-8');
+  
+  // Extract the PVEStages object
+  const stagesMatch = content.match(/export const PVEStages[^=]*=\s*{([\s\S]*?)^}/m);
+  if (!stagesMatch) return {};
+  
+  const stagesContent = stagesMatch[1];
+  const stages = {};
+  
+  // Match each stage block
+  const stageRegex = /(\d+):\s*{([\s\S]*?)^  }/gm;
+  let match;
+  
+  while ((match = stageRegex.exec(stagesContent)) !== null) {
+    const stageNum = parseInt(match[1]);
+    const stageContent = match[2];
+    const stage = {};
+    
+    // Extract name
+    const nameMatch = stageContent.match(/name:\s*"([^"]+)"/);
+    if (nameMatch) stage.name = nameMatch[1];
+    
+    // Extract avatar
+    const avatarMatch = stageContent.match(/avatar:\s*Pkm\.(\w+)/);
+    if (avatarMatch) stage.avatar = avatarMatch[1];
+    
+    // Extract emotion
+    const emotionMatch = stageContent.match(/emotion:\s*Emotion\.(\w+)/);
+    if (emotionMatch) stage.emotion = emotionMatch[1];
+    
+    // Extract shiny chance
+    const shinyMatch = stageContent.match(/shinyChance:\s*([\d\/\s\.]+)/);
+    if (shinyMatch) {
+      const valueStr = shinyMatch[1].trim();
+      let value;
+      if (valueStr.includes('/')) {
+        const [num, denom] = valueStr.split('/').map(s => parseFloat(s.trim()));
+        value = num / denom;
+      } else {
+        value = parseFloat(valueStr);
+      }
+      stage.shinyChance = {
+        value: value,
+        percentage: (value * 100).toFixed(2) + '%'
+      };
+    }
+    
+    // Extract board composition - need to handle multiline nested arrays
+    const boardMatch = stageContent.match(/board:\s*\[(\s*\[[^\]]+\](?:\s*,\s*\[[^\]]+\])*\s*)\]/);
+    if (boardMatch) {
+      const boardContent = boardMatch[1];
+      const board = [];
+      const pokemonRegex = /\[Pkm\.(\w+),\s*(\d+),\s*(\d+)\]/g;
+      let pkmnMatch;
+      
+      while ((pkmnMatch = pokemonRegex.exec(boardContent)) !== null) {
+        board.push({
+          pokemon: pkmnMatch[1],
+          x: parseInt(pkmnMatch[2]),
+          y: parseInt(pkmnMatch[3])
+        });
+      }
+      if (board.length > 0) {
+        stage.board = board;
+      }
+    }
+    
+    // Extract marowak items - need to handle nested arrays more carefully
+    const marowakMatch = stageContent.match(/marowakItems:\s*\[(\s*\[[^\]]*\](?:\s*,\s*\[[^\]]*\])*\s*)\]/);
+    if (marowakMatch) {
+      const marowakContent = marowakMatch[1];
+      const items = [];
+      // Match each inner array
+      const innerArrayRegex = /\[([^\]]*)\]/g;
+      let arrayMatch;
+      
+      while ((arrayMatch = innerArrayRegex.exec(marowakContent)) !== null) {
+        const itemsStr = arrayMatch[1].trim();
+        if (itemsStr) {
+          const pokemonItems = [];
+          const itemRegex = /Item\.(\w+)/g;
+          let singleItemMatch;
+          
+          while ((singleItemMatch = itemRegex.exec(itemsStr)) !== null) {
+            pokemonItems.push(singleItemMatch[1]);
+          }
+          items.push(pokemonItems);
+        } else {
+          items.push([]);
+        }
+      }
+      if (items.length > 0) {
+        stage.marowakItems = items;
+      }
+    }
+    
+    // Extract stat boosts
+    const statBoostsMatch = stageContent.match(/statBoosts:\s*{([\s\S]*?)}/);
+    if (statBoostsMatch) {
+      const boostsContent = statBoostsMatch[1];
+      const boosts = {};
+      const boostRegex = /\[Stat\.(\w+)\]:\s*(-?\d+)/g;
+      let boostMatch;
+      
+      while ((boostMatch = boostRegex.exec(boostsContent)) !== null) {
+        boosts[boostMatch[1]] = parseInt(boostMatch[2]);
+      }
+      stage.statBoosts = boosts;
+    }
+    
+    // Extract static rewards array
+    const rewardsMatch = stageContent.match(/rewards:\s*(\w+)/);
+    if (rewardsMatch) {
+      stage.rewardsType = rewardsMatch[1];
+    }
+    
+    // Detect getRewards function
+    if (stageContent.includes('getRewards(')) {
+      stage.hasGetRewards = true;
+    }
+    
+    // Detect getRewardsPropositions function
+    if (stageContent.includes('getRewardsPropositions(')) {
+      stage.hasGetRewardsPropositions = true;
+    }
+    
+    stages[stageNum] = stage;
+  }
+  
+  return stages;
+}
+
+/**
  * Parse synergies config
  */
 function parseSynergies(configPath) {
@@ -443,6 +743,20 @@ function parseSimpleConfig(configPath, configName) {
  */
 function processConfigs(pokemonData) {
   const configs = {};
+  
+  // Process Item enum
+  const itemEnumPath = path.join(PAC_ROOT, 'app/types/enum/Item.ts');
+  if (fs.existsSync(itemEnumPath)) {
+    configs.itemEnum = parseItemEnum(itemEnumPath);
+    console.log('✓ Processed Item enum');
+  }
+  
+  // Process PVE stages
+  const pveStagesPath = path.join(PAC_ROOT, 'app/models/pve-stages.ts');
+  if (fs.existsSync(pveStagesPath)) {
+    configs.pveStages = parsePVEStages(pveStagesPath);
+    console.log('✓ Processed PVE stages');
+  }
   
   // Process town encounters
   const townEncountersPath = path.join(CONFIGS_PATH, 'town-encounters.ts');
