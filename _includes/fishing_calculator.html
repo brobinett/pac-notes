@@ -1,0 +1,978 @@
+<!-- Fishing Calculator Include -->
+<div class="fishing-calculator">
+  <h3>Fishing Probability Calculator</h3>
+  
+  <div class="calculator-inputs">
+    <div class="input-group">
+      <label for="rod-select">Fishing Rod:</label>
+      <select id="rod-select">
+        <option value="OLD_ROD">Old Rod</option>
+        <option value="GOOD_ROD">Good Rod</option>
+        <option value="SUPER_ROD">Super Rod</option>
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label>Mantine/Mantyke:</label>
+      <div class="pokemon-toggle-button single-toggle" id="mantine-toggle">
+        <input type="checkbox" id="has-mantine">
+        <img src="{{ site.baseurl }}/assets/images/portraits/MANTYKE.png" alt="Mantyke" class="pokemon-portrait" width="48" height="48" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+    <div class="input-group">
+      <label for="wild-chance">Wild Chance (%):</label>
+      <input type="number" id="wild-chance" min="0" max="100" value="0" step="1">
+    </div>
+  </div>
+  
+  <div class="multiselect-section">
+    <div class="optional-pokemon-header">
+      <h4>Optional Pokemon</h4>
+      <p class="multiselect-description">Select additional picks and regional Pokemon to add to the pool</p>
+    </div>
+    <div id="optional-pokemon-grid"></div>
+  </div>
+  
+  <div id="combined-probability-display"></div>
+  <div id="detailed-breakdown"></div>
+</div>
+
+<style>
+.fishing-calculator {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background-color: #f6f8fa;
+}
+
+.fishing-calculator h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.calculator-inputs {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.input-group label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.input-group input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.input-group input[type="number"] {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  width: 100px;
+}
+
+.input-group select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+}
+
+.single-toggle {
+  width: 60px;
+  height: 60px;
+}
+
+.optional-pokemon-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.optional-pokemon-header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.optional-pokemon-header .multiselect-description {
+  margin: 0;
+}
+
+#detailed-breakdown {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e1e4e8;
+}
+
+#detailed-breakdown h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.rarity-group {
+  margin-bottom: 1.5rem;
+}
+
+.rarity-group h5 {
+  margin-bottom: 0.75rem;
+  color: #586069;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.pokemon-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+}
+
+.pokemon-item .pokemon-portrait {
+  flex-shrink: 0;
+}
+
+.pokemon-item .pokemon-info {
+  flex-grow: 1;
+}
+
+.pokemon-item .pokemon-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.pokemon-item .pokemon-probability {
+  font-size: 0.85rem;
+  color: #586069;
+}
+
+.pool-controls {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+}
+
+.pool-input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.pool-input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pool-input-item label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pool-input-item label .pokemon-portrait {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.pool-input-item label span {
+  flex: 1;
+}
+
+.pool-input-item input {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.multiselect-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.multiselect-description {
+  font-size: 0.85rem;
+  color: #586069;
+}
+
+#optional-pokemon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+
+.pool-size-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pool-size-input-wrapper input {
+  flex: 0 0 auto;
+  width: 60px;
+}
+
+.pool-size-default {
+  font-size: 0.85rem;
+  color: #586069;
+  white-space: nowrap;
+}
+
+.combined-probability-display {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+}
+
+.vertical-probability-bar {
+  flex: 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.vertical-bar-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  cursor: default;
+  padding: 0.25rem 0;
+}
+
+.vertical-bar-segment:hover {
+  filter: brightness(1.1);
+}
+
+.probability-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.probability-section {
+  border-left: 3px solid;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.probability-pokemon-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.probability-pokemon-stack.horizontal-wrap {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.probability-pokemon-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #e1e4e8;
+  min-height: 15px;
+}
+
+.horizontal-wrap .probability-pokemon-strip {
+  border-right: 1px solid #e1e4e8;
+  border-bottom: 1px solid #e1e4e8;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  justify-content: center;
+  align-items: center;
+  min-width: 70px;
+  box-sizing: border-box;
+}
+
+.horizontal-wrap .probability-pokemon-strip:last-child {
+  border-right: 1px solid #e1e4e8;
+}
+
+.probability-pokemon-strip:last-child {
+  border-bottom: none;
+}
+
+.probability-pokemon-strip.condensed {
+  min-height: 8px;
+  padding: 0.0625rem 0.25rem;
+}
+
+.probability-pokemon-strip.condensed .pokemon-portrait {
+  display: none;
+}
+
+.probability-pokemon-strip.condensed .pokemon-name {
+  display: none;
+}
+
+.probability-pokemon-strip .pokemon-portrait {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.probability-pokemon-strip .pokemon-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.horizontal-wrap .probability-pokemon-strip .pokemon-name {
+  text-align: center;
+  font-size: 0.65rem;
+}
+
+.probability-pokemon-strip .pokemon-probability {
+  font-size: 0.7rem;
+  color: #586069;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.horizontal-wrap .probability-pokemon-strip .pokemon-probability {
+  font-size: 0.65rem;
+}
+
+/* Pokemon Toggle Button Component */
+.pokemon-toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 0.5rem;
+}
+
+.pokemon-toggle-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  background-color: white;
+  border: 3px solid #d1d5da;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  aspect-ratio: 1;
+}
+
+.pokemon-toggle-button:hover {
+  border-color: #959da5;
+  transform: scale(1.05);
+}
+
+.pokemon-toggle-button.selected {
+  border-color: #0366d6;
+  background-color: #f1f8ff;
+}
+
+.pokemon-toggle-button input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pokemon-toggle-button .pokemon-portrait {
+  width: 48px;
+  height: 48px;
+}
+</style>
+
+<script>
+(function() {
+  var fishRarityProbability = {{ site.data.synergies_config.fishRarityProbability | jsonify }};
+  var allPokemon = {{ site.data.pokemon | jsonify }};
+  var poolSizeConfig = {{ site.data.pools_config.poolSize | jsonify }};
+  var REMORAID_RATE = {{ site.data.shop_config.specialRates.REMORAID_RATE.value | jsonify }};
+  
+  var DEFAULT_FISH = {
+    'OLD_ROD': 'Magikarp',
+    'GOOD_ROD': 'Feebas',
+    'SUPER_ROD': 'Wishiwashi'
+  };
+  
+  var COLORS = {
+    'REMORAID': '#FF6B6B',
+    'SPECIAL': '#FF69B4',
+    'COMMON': '#A0A0A0',
+    'UNCOMMON': '#3bc95e',
+    'RARE': '#41bfcc',
+    'EPIC': '#927FFF',
+    'ULTRA': '#E53B3B'
+  };
+  
+  /* Build water-type Pokemon pool from game data */
+  function buildWaterPool() {
+    var waterPool = {
+      'COMMON': [],
+      'UNCOMMON': [],
+      'RARE': [],
+      'EPIC': [],
+      'ULTRA': []
+    };
+    
+    var regionalPokemon = [];
+    var addPickPokemon = [];
+    
+    for (var pkmnKey in allPokemon) {
+      var pokemon = allPokemon[pkmnKey];
+      
+      /* Skip if no category or not tier 1 */
+      if (!pokemon.Category || pokemon.Tier !== '1') continue;
+      
+      /* Check if it's a water type */
+      var isWater = pokemon['Type 1'] === 'WATER' || 
+                    pokemon['Type 2'] === 'WATER' || 
+                    pokemon['Type 3'] === 'WATER' || 
+                    pokemon['Type 4'] === 'WATER';
+      
+      if (!isWater) continue;
+      
+      var rarity = pokemon.Category;
+      
+      /* Skip special rarities */
+      if (rarity === 'SPECIAL' || rarity === 'HATCH' || 
+          rarity === 'UNIQUE' || rarity === 'LEGENDARY') continue;
+      
+      /* Calculate pool size based on number of stages */
+      var nbStages = parseInt(pokemon['Nb stages']) || 1;
+      var poolSize = poolSizeConfig[rarity] ? poolSizeConfig[rarity][nbStages - 1] : 0;
+      
+      var isRegional = pokemon.Regional === 'true';
+      var isAddPick = pokemon['Additional pick'] === 'true';
+      
+      var pokemonData = {
+        name: pokemon.Name,
+        displayName: formatPokemonName(pokemon.Name),
+        index: pokemon.index || pokemon.Index || '9999',
+        isRegional: isRegional,
+        isAddPick: isAddPick,
+        defaultPoolSize: poolSize,
+        nbStages: nbStages,
+        rarity: rarity
+      };
+      
+      /* Track regional and add pick pokemon separately */
+      if (isRegional) {
+        regionalPokemon.push(pokemonData);
+      }
+      if (isAddPick) {
+        addPickPokemon.push(pokemonData);
+      }
+      
+      /* Add to appropriate rarity pool */
+      if (waterPool[rarity]) {
+        waterPool[rarity].push(pokemonData);
+      }
+    }
+    
+    /* Sort each pool alphabetically */
+    for (var rarity in waterPool) {
+      waterPool[rarity].sort(function(a, b) {
+        return a.displayName.localeCompare(b.displayName);
+      });
+    }
+    
+    /* Sort regional and add pick by index */
+    regionalPokemon.sort(function(a, b) {
+      return a.index.localeCompare(b.index);
+    });
+    
+    addPickPokemon.sort(function(a, b) {
+      return a.index.localeCompare(b.index);
+    });
+    
+    return {
+      pool: waterPool,
+      regional: regionalPokemon,
+      addPick: addPickPokemon
+    };
+  }
+  
+  function formatPokemonName(name) {
+    /* Convert POKEMON_NAME to Pokemon Name */
+    return name.split('_')
+      .map(function(word) {
+        return word.charAt(0) + word.slice(1).toLowerCase();
+      })
+      .join(' ');
+  }
+  
+  var waterPoolData = buildWaterPool();
+  var WATER_POOL = waterPoolData.pool;
+  var REGIONAL_POKEMON = waterPoolData.regional;
+  var ADD_PICK_POKEMON = waterPoolData.addPick;
+  
+  /* Build multiselect UI */
+  function buildMultiselects() {
+    /* Organize Pokemon by rarity */
+    var pokemonByRarity = {
+      'COMMON': {addPick: [], regional: []},
+      'UNCOMMON': {addPick: [], regional: []},
+      'RARE': {addPick: [], regional: []},
+      'EPIC': {addPick: [], regional: []},
+      'ULTRA': {addPick: [], regional: []}
+    };
+    
+    /* Separate add picks and regionals by rarity */
+    for (var i = 0; i < ADD_PICK_POKEMON.length; i++) {
+      var pokemon = ADD_PICK_POKEMON[i];
+      if (pokemonByRarity[pokemon.rarity]) {
+        pokemonByRarity[pokemon.rarity].addPick.push(pokemon);
+      }
+    }
+    
+    for (var i = 0; i < REGIONAL_POKEMON.length; i++) {
+      var pokemon = REGIONAL_POKEMON[i];
+      if (pokemonByRarity[pokemon.rarity]) {
+        pokemonByRarity[pokemon.rarity].regional.push(pokemon);
+      }
+    }
+    
+    /* Build HTML - all in one row, ordered by rarity (add picks first, then regionals) */
+    var gridHtml = '';
+    var rarities = ['COMMON', 'UNCOMMON', 'RARE', 'EPIC', 'ULTRA'];
+    
+    for (var r = 0; r < rarities.length; r++) {
+      var rarity = rarities[r];
+      var addPicks = pokemonByRarity[rarity].addPick;
+      var regionals = pokemonByRarity[rarity].regional;
+      
+      /* Add picks first */
+      for (var i = 0; i < addPicks.length; i++) {
+        var pokemon = addPicks[i];
+        var checkboxId = 'addpick-' + pokemon.name.toLowerCase();
+        gridHtml += '<div class="pokemon-toggle-button" data-checkbox-id="' + checkboxId + '" title="' + pokemon.displayName + ' (Add Pick)">';
+        gridHtml += '<input type="checkbox" id="' + checkboxId + '" value="' + pokemon.name + '">';
+        gridHtml += createPokemonPortrait(pokemon.name);
+        gridHtml += '</div>';
+      }
+      
+      /* Then regionals */
+      for (var i = 0; i < regionals.length; i++) {
+        var pokemon = regionals[i];
+        var checkboxId = 'regional-' + pokemon.name.toLowerCase();
+        gridHtml += '<div class="pokemon-toggle-button" data-checkbox-id="' + checkboxId + '" title="' + pokemon.displayName + ' (Regional)">';
+        gridHtml += '<input type="checkbox" id="' + checkboxId + '" value="' + pokemon.name + '">';
+        gridHtml += createPokemonPortrait(pokemon.name);
+        gridHtml += '</div>';
+      }
+    }
+    
+    document.getElementById('optional-pokemon-grid').innerHTML = gridHtml || '<em>No optional water types</em>';
+    
+    /* Add click handlers to toggle buttons */
+    var toggleButtons = document.querySelectorAll('.pokemon-toggle-button');
+    for (var i = 0; i < toggleButtons.length; i++) {
+      toggleButtons[i].addEventListener('click', function() {
+        var checkboxId = this.getAttribute('data-checkbox-id');
+        var checkbox = document.getElementById(checkboxId);
+        checkbox.checked = !checkbox.checked;
+        
+        if (checkbox.checked) {
+          this.classList.add('selected');
+        } else {
+          this.classList.remove('selected');
+        }
+        
+        updateDisplay();
+        updateDetailedBreakdown();
+      });
+    }
+  }
+  
+  /* Check if a Pokemon should be included in the pool */
+  function isPokemonInPool(pokemon) {
+    /* Always exclude if both regional AND add pick */
+    if (pokemon.isRegional && pokemon.isAddPick) {
+      var regionalChecked = document.getElementById('regional-' + pokemon.name.toLowerCase());
+      var addPickChecked = document.getElementById('addpick-' + pokemon.name.toLowerCase());
+      return (regionalChecked && regionalChecked.checked) || (addPickChecked && addPickChecked.checked);
+    }
+    
+    /* Check regional status */
+    if (pokemon.isRegional) {
+      var checkbox = document.getElementById('regional-' + pokemon.name.toLowerCase());
+      return checkbox && checkbox.checked;
+    }
+    
+    /* Check add pick status */
+    if (pokemon.isAddPick) {
+      var checkbox = document.getElementById('addpick-' + pokemon.name.toLowerCase());
+      return checkbox && checkbox.checked;
+    }
+    
+    /* Default pool Pokemon (not regional, not add pick) */
+    return true;
+  }
+  
+  function calculateProbabilities() {
+    var rod = document.getElementById('rod-select').value;
+    var hasMantine = document.getElementById('has-mantine').checked;
+    var wildChance = parseFloat(document.getElementById('wild-chance').value) / 100;
+    
+    var probabilities = {};
+    var rodProbabilities = fishRarityProbability[rod];
+    
+    var remoraid_mantine = hasMantine ? REMORAID_RATE : 0;
+    var remoraid_wild = hasMantine ? 0 : wildChance;
+    
+    var remoraid_prob = remoraid_mantine + remoraid_wild - (remoraid_mantine * remoraid_wild);
+    
+    probabilities['Remoraid'] = remoraid_prob;
+    
+    var remaining_prob = 1 - remoraid_prob;
+    
+    for (var rarity in rodProbabilities) {
+      var rarity_prob = rodProbabilities[rarity].probability;
+      var adjusted_prob = remaining_prob * rarity_prob;
+      
+      if (rarity === 'SPECIAL') {
+        probabilities[DEFAULT_FISH[rod]] = adjusted_prob;
+      } else {
+        probabilities[rarity.charAt(0) + rarity.slice(1).toLowerCase() + ' Water'] = adjusted_prob;
+      }
+    }
+    
+    return probabilities;
+  }
+  
+  function updateDisplay() {
+    var probabilities = calculateProbabilities();
+    var rod = document.getElementById('rod-select').value;
+    
+    /* Store current pool size values */
+    var currentPoolSizes = {};
+    var poolInputs = document.querySelectorAll('[id^="pool-"]');
+    for (var i = 0; i < poolInputs.length; i++) {
+      currentPoolSizes[poolInputs[i].id] = parseInt(poolInputs[i].value);
+    }
+    
+    /* Build outcomes in order: COMMON, UNCOMMON, RARE, EPIC, SPECIAL */
+    var outcomes = [];
+    var rarities = ['COMMON', 'UNCOMMON', 'RARE', 'EPIC'];
+    
+    /* Water types by rarity */
+    for (var r = 0; r < rarities.length; r++) {
+      var rarity = rarities[r];
+      var rarityKey = rarity.charAt(0) + rarity.slice(1).toLowerCase() + ' Water';
+      var rarityProb = probabilities[rarityKey];
+      
+      if (rarityProb > 0 && WATER_POOL[rarity] && WATER_POOL[rarity].length > 0) {
+        var availablePokemon = WATER_POOL[rarity].filter(isPokemonInPool);
+        
+        if (availablePokemon.length === 0) continue;
+        
+        /* Calculate individual pokemon probabilities */
+        var totalPoolSize = 0;
+        for (var p = 0; p < availablePokemon.length; p++) {
+          var pokemon = availablePokemon[p];
+          var inputId = 'pool-' + rarity.toLowerCase() + '-' + pokemon.name.toLowerCase();
+          var poolSize = currentPoolSizes[inputId] !== undefined ? currentPoolSizes[inputId] : pokemon.defaultPoolSize;
+          totalPoolSize += poolSize;
+        }
+        
+        var pokemonList = [];
+        for (var p = 0; p < availablePokemon.length; p++) {
+          var pokemon = availablePokemon[p];
+          var inputId = 'pool-' + rarity.toLowerCase() + '-' + pokemon.name.toLowerCase();
+          var poolSize = currentPoolSizes[inputId] !== undefined ? currentPoolSizes[inputId] : pokemon.defaultPoolSize;
+          
+          if (poolSize > 0 && totalPoolSize > 0) {
+            pokemonList.push({
+              name: pokemon.name,
+              displayName: pokemon.displayName,
+              prob: rarityProb * (poolSize / totalPoolSize)
+            });
+          }
+        }
+        
+        if (pokemonList.length > 0) {
+          outcomes.push({
+            category: rarity.charAt(0) + rarity.slice(1).toLowerCase(),
+            totalProb: rarityProb,
+            color: COLORS[rarity],
+            pokemon: pokemonList
+          });
+        }
+      }
+    }
+    
+    /* Special fish section (combines default fish + Remoraid) */
+    var specialPokemon = [];
+    var specialTotalProb = 0;
+    
+    /* Remoraid */
+    if (probabilities['Remoraid'] > 0) {
+      specialPokemon.push({
+        name: 'REMORAID',
+        displayName: 'Remoraid',
+        prob: probabilities['Remoraid']
+      });
+      specialTotalProb += probabilities['Remoraid'];
+    }
+    
+    /* Default fish */
+    var defaultFish = DEFAULT_FISH[rod];
+    if (probabilities[defaultFish] > 0) {
+      specialPokemon.push({
+        name: defaultFish.toUpperCase(),
+        displayName: defaultFish,
+        prob: probabilities[defaultFish]
+      });
+      specialTotalProb += probabilities[defaultFish];
+    }
+    
+    if (specialPokemon.length > 0) {
+      outcomes.push({
+        category: 'Special',
+        totalProb: specialTotalProb,
+        color: COLORS.SPECIAL,
+        pokemon: specialPokemon
+      });
+    }
+    
+    /* Build combined display HTML */
+    var combinedHtml = '<div class="combined-probability-display">';
+    
+    /* Vertical bar */
+    combinedHtml += '<div class="vertical-probability-bar">';
+    for (var i = 0; i < outcomes.length; i++) {
+      var outcome = outcomes[i];
+      var height = (outcome.totalProb * 100).toFixed(2) + '%';
+      var label = outcome.totalProb > 0.05 ? ((outcome.totalProb * 100).toFixed(1) + '%') : '';
+      
+      combinedHtml += '<div class="vertical-bar-segment" style="height: ' + height + '; background-color: ' + outcome.color + ';" title="' + outcome.category + ': ' + (outcome.totalProb * 100).toFixed(2) + '%">';
+      combinedHtml += label;
+      combinedHtml += '</div>';
+    }
+    combinedHtml += '</div>';
+    
+    /* Details sections */
+    combinedHtml += '<div class="probability-details">';
+    for (var i = 0; i < outcomes.length; i++) {
+      var outcome = outcomes[i];
+      var sectionHeight = (outcome.totalProb * 100).toFixed(2) + '%';
+      var sectionPixels = 700 * outcome.totalProb;
+      var numPokemon = outcome.pokemon.length;
+      
+      /* Determine layout: if cramped, use horizontal wrap */
+      var minVerticalSpace = 30;
+      var isCramped = sectionPixels < (numPokemon * minVerticalSpace);
+      var layoutClass = isCramped ? ' horizontal-wrap' : '';
+      
+      combinedHtml += '<div class="probability-section" style="border-left-color: ' + outcome.color + '; height: ' + sectionHeight + ';" title="' + outcome.category + ' (' + (outcome.totalProb * 100).toFixed(2) + '%)">';
+      
+      combinedHtml += '<div class="probability-pokemon-stack' + layoutClass + '">';
+      
+      /* Calculate heights/widths for each Pokemon within this section */
+      for (var p = 0; p < outcome.pokemon.length; p++) {
+        var pkmn = outcome.pokemon[p];
+        var pokemonPercent = (pkmn.prob / outcome.totalProb) * 100;
+        
+        var sizeStyle = '';
+        var portraitSize = 15;
+        
+        if (isCramped) {
+          /* Horizontal layout - calculate width percentage */
+          var stripWidth = pokemonPercent.toFixed(2) + '%';
+          sizeStyle = 'width: ' + stripWidth + ';';
+          portraitSize = 24;
+        } else {
+          /* Vertical layout - calculate height and scale portrait */
+          var stripHeight = pokemonPercent.toFixed(2) + '%';
+          var stripPixels = sectionPixels * (pkmn.prob / outcome.totalProb);
+          
+          /* Scale portrait based on available space */
+          if (stripPixels >= 60) {
+            portraitSize = 48;
+          } else if (stripPixels >= 40) {
+            portraitSize = 32;
+          } else if (stripPixels >= 25) {
+            portraitSize = 24;
+          } else {
+            portraitSize = 15;
+          }
+          
+          sizeStyle = 'height: ' + stripHeight + ';';
+        }
+        
+        /* Determine if this should be condensed (very small percentage) */
+        var isCondensed = pkmn.prob < 0.005 && !isCramped;
+        var condensedClass = isCondensed ? ' condensed' : '';
+        
+        combinedHtml += '<div class="probability-pokemon-strip' + condensedClass + '" style="' + sizeStyle + ' background-color: ' + outcome.color + '20;" title="' + pkmn.displayName + ': ' + (pkmn.prob * 100).toFixed(2) + '%">';
+        
+        if (!isCondensed) {
+          combinedHtml += '<img src="{{ site.baseurl }}/assets/images/portraits/' + pkmn.name + '.png" alt="' + pkmn.name + '" class="pokemon-portrait" style="width: ' + portraitSize + 'px; height: ' + portraitSize + 'px;" onerror="this.style.display=\'none\'">';
+          combinedHtml += '<div class="pokemon-name">' + pkmn.displayName + '</div>';
+        }
+        
+        combinedHtml += '<div class="pokemon-probability">' + (pkmn.prob * 100).toFixed(2) + '%</div>';
+        combinedHtml += '</div>';
+      }
+      
+      combinedHtml += '</div></div>';
+    }
+    combinedHtml += '</div></div>';
+    
+    document.getElementById('combined-probability-display').innerHTML = combinedHtml;
+  }
+  
+  function getColorForOutcome(name) {
+    if (name === 'Remoraid') return COLORS.REMORAID;
+    if (name === 'Magikarp' || name === 'Feebas' || name === 'Wishiwashi') return COLORS.SPECIAL;
+    if (name.includes('Common')) return COLORS.COMMON;
+    if (name.includes('Uncommon')) return COLORS.UNCOMMON;
+    if (name.includes('Rare')) return COLORS.RARE;
+    if (name.includes('Epic')) return COLORS.EPIC;
+    return '#999';
+  }
+  
+  function updateDetailedBreakdown() {
+    var probabilities = calculateProbabilities();
+    
+    /* Store current pool size values before rebuilding */
+    var currentPoolSizes = {};
+    var poolInputs = document.querySelectorAll('[id^="pool-"]');
+    for (var i = 0; i < poolInputs.length; i++) {
+      currentPoolSizes[poolInputs[i].id] = parseInt(poolInputs[i].value);
+    }
+    
+    var detailedHtml = '<h4>Pool Size Controls</h4>';
+    
+    /* Water-type Pokemon by rarity - only pool controls */
+    var rarities = ['COMMON', 'UNCOMMON', 'RARE', 'EPIC', 'ULTRA'];
+    for (var r = 0; r < rarities.length; r++) {
+      var rarity = rarities[r];
+      var rarityProb = probabilities[rarity.charAt(0) + rarity.slice(1).toLowerCase() + ' Water'];
+      
+      if (rarityProb > 0 && WATER_POOL[rarity] && WATER_POOL[rarity].length > 0) {
+        /* Filter pool based on regional and add pick settings */
+        var availablePokemon = WATER_POOL[rarity].filter(isPokemonInPool);
+        
+        if (availablePokemon.length === 0) continue;
+        
+        detailedHtml += '<div class="rarity-group">';
+        detailedHtml += '<h5>' + rarity.charAt(0) + rarity.slice(1).toLowerCase() + '</h5>';
+        
+        /* Pool size controls */
+        detailedHtml += '<div class="pool-controls">';
+        detailedHtml += '<div class="pool-input-grid">';
+        
+        for (var p = 0; p < availablePokemon.length; p++) {
+          var pokemon = availablePokemon[p];
+          var inputId = 'pool-' + rarity.toLowerCase() + '-' + pokemon.name.toLowerCase();
+          
+          /* Use stored value if it exists, otherwise use default */
+          var currentValue = currentPoolSizes[inputId] !== undefined ? currentPoolSizes[inputId] : pokemon.defaultPoolSize;
+          
+          detailedHtml += '<div class="pool-input-item">';
+          detailedHtml += '<label for="' + inputId + '">';
+          detailedHtml += createPokemonPortrait(pokemon.name);
+          detailedHtml += '<span>' + pokemon.displayName + '</span>';
+          detailedHtml += '</label>';
+          detailedHtml += '<div class="pool-size-input-wrapper">';
+          detailedHtml += '<input type="number" id="' + inputId + '" min="0" max="200" value="' + currentValue + '" data-rarity="' + rarity + '" data-default="' + pokemon.defaultPoolSize + '">';
+          detailedHtml += '<span class="pool-size-default">/ ' + pokemon.defaultPoolSize + '</span>';
+          detailedHtml += '</div>';
+          detailedHtml += '</div>';
+        }
+        
+        detailedHtml += '</div></div></div>';
+      }
+    }
+    
+    document.getElementById('detailed-breakdown').innerHTML = detailedHtml;
+    
+    /* Add event listeners to pool size inputs */
+    var newPoolInputs = document.querySelectorAll('[id^="pool-"]');
+    for (var i = 0; i < newPoolInputs.length; i++) {
+      newPoolInputs[i].addEventListener('input', function() {
+        updateDisplay();
+        updateDetailedBreakdown();
+      });
+    }
+  }
+  
+  function createPokemonPortrait(pokemonName) {
+    /* Generate portrait HTML - portraits are at assets/images/portraits/[name].png */
+    var portraitPath = '{{ site.baseurl }}/assets/images/portraits/' + pokemonName + '.png';
+    return '<img src="' + portraitPath + '" alt="' + pokemonName + '" class="pokemon-portrait" width="64" height="64" onerror="this.style.display=\'none\'">';
+  }
+  
+  document.getElementById('rod-select').addEventListener('change', function() {
+    updateDisplay();
+    updateDetailedBreakdown();
+  });
+  
+  /* Mantine toggle button */
+  document.getElementById('mantine-toggle').addEventListener('click', function() {
+    var checkbox = document.getElementById('has-mantine');
+    checkbox.checked = !checkbox.checked;
+    
+    if (checkbox.checked) {
+      this.classList.add('selected');
+    } else {
+      this.classList.remove('selected');
+    }
+    
+    updateDisplay();
+    updateDetailedBreakdown();
+  });
+  
+  document.getElementById('wild-chance').addEventListener('input', function() {
+    updateDisplay();
+    updateDetailedBreakdown();
+  });
+  
+  buildMultiselects();
+  updateDisplay();
+  updateDetailedBreakdown();
+})();
+</script>
