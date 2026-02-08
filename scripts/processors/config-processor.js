@@ -265,15 +265,16 @@ function parseItemEnum(enumPath) {
     itemMappings: {}
   };
   
-  // Extract item array constants (e.g., ItemComponentsNoFossilOrScarf, Berries, etc.)
-  const arrayRegex = /export const (\w+)(?:\s*:\s*Item\[\])?\s*=\s*\[([\s\S]*?)\](?:\s+satisfies\s+Item\[\])?/g;
+  // More flexible regex for array constants
+  // Handles various type annotations: Item[], SynergyGem[], Tool[], or no annotation
+  const arrayRegex = /export const (\w+)(?:\s*:\s*(?:Item\[\]|SynergyGem\[\]|Tool\[\]|\([^\)]+\)\[\]|[A-Z]\w*\[\]))?\s*=\s*\[([\s\S]*?)\](?:\s+satisfies\s+[^\n]+)?/g;
   let arrayMatch;
   
   while ((arrayMatch = arrayRegex.exec(content)) !== null) {
     const arrayName = arrayMatch[1];
     const arrayContent = arrayMatch[2];
     
-    // Skip if it's a type definition, not an array
+    // Skip if it's a type definition or contains arrow functions
     if (arrayContent.includes('=>') || arrayContent.includes('function')) continue;
     
     const items = [];
@@ -284,7 +285,7 @@ function parseItemEnum(enumPath) {
       items.push(itemMatch[1]);
     }
     
-    // Also handle spread operators
+    // Handle spread operators
     const spreadRegex = /\.\.\.(\w+)/g;
     let spreadMatch;
     const spreads = [];
@@ -297,6 +298,40 @@ function parseItemEnum(enumPath) {
       result.itemCategories[arrayName] = {
         items: items,
         includes: spreads.length > 0 ? spreads : undefined
+      };
+    }
+  }
+  
+  // Handle computed arrays (Scarves, CraftableItems, etc.)
+  // Look for various computed patterns:
+  // 1. Object.keys(X) as Item[]
+  // 2. Object.keys(X).filter(...) as Item[]
+  // 3. Y.filter(...) as Item[]
+  const computedPatterns = [
+    // Pattern 1: Object.keys(X) as Item[]
+    /export const (\w+)(?:\s*:\s*Item\[\])?\s*=\s*Object\.keys\((\w+)\)(?:\s+as\s+Item\[\])?/g,
+    // Pattern 2: Object.keys(X).filter(...) or X.filter(...)
+    /export const (\w+)(?:\s*:\s*Item\[\])?\s*=\s*(?:Object\.keys\((\w+)\)|(\w+))\.(?:filter|map)\([^)]*\)(?:\s+as\s+Item\[\])?/g
+  ];
+  
+  for (const pattern of computedPatterns) {
+    let computedMatch;
+    pattern.lastIndex = 0; // Reset regex state
+    
+    while ((computedMatch = pattern.exec(content)) !== null) {
+      const arrayName = computedMatch[1];
+      const sourceObject = computedMatch[2] || computedMatch[3];
+      
+      // Skip if already added as a literal array
+      if (result.itemCategories[arrayName] && !result.itemCategories[arrayName].computed) {
+        continue;
+      }
+      
+      // Mark as computed from source
+      result.itemCategories[arrayName] = {
+        computed: true,
+        source: sourceObject || 'unknown',
+        items: [] // Will be empty for computed arrays
       };
     }
   }
@@ -810,10 +845,10 @@ function parsePools(configPath) {
   
   // Extract pool arrays
   const extractPool = (poolName) => {
-    const match = content.match(new RegExp(`export const ${poolName}\\s*=\\s*new Array<[^>]+>\\(([\\s\\S]*?)\\)`, 'm'));
+    const match = content.match(new RegExp(`export const ${poolName}\\s*=\\s*new Array<[^>]+>\\([\\s\\S]*?\\)`, 'm'));
     if (!match) return [];
     
-    const poolContent = match[1];
+    const poolContent = match[0];
     const pokemon = [];
     const pkmnRegex = /Pkm(?:Duo)?\.(\w+)/g;
     let pkmnMatch;
@@ -912,7 +947,7 @@ function processConfigs(pokemonData) {
   const itemEnumPath = path.join(PAC_ROOT, 'app/types/enum/Item.ts');
   if (fs.existsSync(itemEnumPath)) {
     configs.itemEnum = parseItemEnum(itemEnumPath);
-    console.log('✓ Processed Item enum');
+    console.log(`✓ Processed Item enum (${Object.keys(configs.itemEnum.itemCategories).length} categories)`);
   }
   
   // Process PVE stages
@@ -982,5 +1017,6 @@ function processConfigs(pokemonData) {
 }
 
 module.exports = {
-  processConfigs
+  processConfigs,
+  parseItemEnum
 };
